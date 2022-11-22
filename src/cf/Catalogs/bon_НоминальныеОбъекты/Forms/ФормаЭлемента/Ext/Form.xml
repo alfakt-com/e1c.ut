@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="147">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="148"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="57">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Button name="ОбновитьИтоги" id="149">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьИтоги</CommandName>
+					<Font bold="true" kind="AutoFont"/>
+					<ExtendedTooltip name="ОбновитьИтогиРасширеннаяПодсказка" id="150"/>
+				</Button>
+				<InputField name="ОстатокБуф" id="22">
+					<DataPath>Объект.ОстатокБуф</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОстатокБуфКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОстатокБуфРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ОстатокОст" id="25">
+					<DataPath>Объект.ОстатокОст</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОстатокОстКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОстатокОстРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="53">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<Page name="Данные" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<InputField name="Владелец" id="7">
+							<DataPath>Объект.Owner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Держатель" id="13">
+							<DataPath>Объект.Держатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДержательКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ДержательРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<CheckBoxField name="ЗапретНаИспользование" id="10">
+							<DataPath>Объект.ЗапретНаИспользование</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗапретНаИспользованиеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЗапретНаИспользованиеРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<Table name="Счета" id="28">
+							<Representation>List</Representation>
+							<TitleLocation>Auto</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Width>6</Width>
+							<MaxWidth>50</MaxWidth>
+							<Height>6</Height>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Счета</DataPath>
+							<Font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СчетаКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="СчетаКоманднаяПанель" id="30">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СчетаРасширеннаяПодсказка" id="31"/>
+							<SearchStringAddition name="СчетаСтрокаПоиска" id="32">
+								<AdditionSource>
+									<Item>Счета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетаСтрокаПоискаКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="СчетаСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СчетаСостояниеПросмотра" id="35">
+								<AdditionSource>
+									<Item>Счета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетаСостояниеПросмотраКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="СчетаСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СчетаУправлениеПоиском" id="38">
+								<AdditionSource>
+									<Item>Счета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СчетаУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="СчетаУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СчетаОсновной" id="44">
+									<DataPath>Счета.Основной</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ос.</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СчетаОсновнойКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СчетаОсновнойРасширеннаяПодсказка" id="46"/>
+								</CheckBoxField>
+								<LabelField name="СчетаСотовый" id="41">
+									<DataPath>Счета.Сотовый</DataPath>
+									<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СчетаСотовыйКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СчетаСотовыйРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<LabelField name="СчетаКонтрагенты" id="50">
+									<DataPath>Счета.Контрагенты</DataPath>
+									<TitleFont ref="style:NormalTextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СчетаКонтрагентыКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="СчетаКонтрагентыРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="История" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<Pages name="Группа4" id="61">
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<Page name="Обороты" id="63">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обороты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обороты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОборотыРасширеннаяПодсказка" id="64"/>
+									<ChildItems>
+										<Table name="ОборотыПоПартиям" id="65">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ОборотыПоПартиям</DataPath>
+											<RowPictureDataPath>ОборотыПоПартиям.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ОборотыПоПартиямКонтекстноеМеню" id="66"/>
+											<AutoCommandBar name="ОборотыПоПартиямКоманднаяПанель" id="67"/>
+											<ExtendedTooltip name="ОборотыПоПартиямРасширеннаяПодсказка" id="68"/>
+											<SearchStringAddition name="ОборотыПоПартиямСтрокаПоиска" id="69">
+												<AdditionSource>
+													<Item>ОборотыПоПартиям</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ОборотыПоПартиямСтрокаПоискаКонтекстноеМеню" id="70"/>
+												<ExtendedTooltip name="ОборотыПоПартиямСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ОборотыПоПартиямСостояниеПросмотра" id="72">
+												<AdditionSource>
+													<Item>ОборотыПоПартиям</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ОборотыПоПартиямСостояниеПросмотраКонтекстноеМеню" id="73"/>
+												<ExtendedTooltip name="ОборотыПоПартиямСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ОборотыПоПартиямУправлениеПоиском" id="75">
+												<AdditionSource>
+													<Item>ОборотыПоПартиям</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ОборотыПоПартиямУправлениеПоискомКонтекстноеМеню" id="76"/>
+												<ExtendedTooltip name="ОборотыПоПартиямУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ОборотыПоПартиямПериод" id="102">
+													<DataPath>ОборотыПоПартиям.Период</DataPath>
+													<Width>3</Width>
+													<ContextMenu name="ОборотыПоПартиямПериодКонтекстноеМеню" id="103"/>
+													<ExtendedTooltip name="ОборотыПоПартиямПериодРасширеннаяПодсказка" id="104"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямРегистратор" id="105">
+													<DataPath>ОборотыПоПартиям.Регистратор</DataPath>
+													<ContextMenu name="ОборотыПоПартиямРегистраторКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ОборотыПоПартиямРегистраторРасширеннаяПодсказка" id="107"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямПартия" id="99">
+													<DataPath>ОборотыПоПартиям.Партия</DataPath>
+													<ContextMenu name="ОборотыПоПартиямПартияКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="ОборотыПоПартиямПартияРасширеннаяПодсказка" id="101"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямДатаНачислени" id="84">
+													<DataPath>ОборотыПоПартиям.ДатаНачислени</DataPath>
+													<Width>9</Width>
+													<ContextMenu name="ОборотыПоПартиямДатаНачислениКонтекстноеМеню" id="85"/>
+													<ExtendedTooltip name="ОборотыПоПартиямДатаНачислениРасширеннаяПодсказка" id="86"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямХарактеристикаБонуса" id="108">
+													<DataPath>ОборотыПоПартиям.ХарактеристикаБонуса</DataPath>
+													<ContextMenu name="ОборотыПоПартиямХарактеристикаБонусаКонтекстноеМеню" id="109"/>
+													<ExtendedTooltip name="ОборотыПоПартиямХарактеристикаБонусаРасширеннаяПодсказка" id="110"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямБуферПриход" id="78">
+													<DataPath>ОборотыПоПартиям.БуферПриход</DataPath>
+													<Width>9</Width>
+													<ContextMenu name="ОборотыПоПартиямБуферПриходКонтекстноеМеню" id="79"/>
+													<ExtendedTooltip name="ОборотыПоПартиямБуферПриходРасширеннаяПодсказка" id="80"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямБуферРасход" id="81">
+													<DataPath>ОборотыПоПартиям.БуферРасход</DataPath>
+													<Width>8</Width>
+													<ContextMenu name="ОборотыПоПартиямБуферРасходКонтекстноеМеню" id="82"/>
+													<ExtendedTooltip name="ОборотыПоПартиямБуферРасходРасширеннаяПодсказка" id="83"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямОстатокПриход" id="93">
+													<DataPath>ОборотыПоПартиям.ОстатокПриход</DataPath>
+													<Width>10</Width>
+													<ContextMenu name="ОборотыПоПартиямОстатокПриходКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ОборотыПоПартиямОстатокПриходРасширеннаяПодсказка" id="95"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямОстатокРасход" id="96">
+													<DataPath>ОборотыПоПартиям.ОстатокРасход</DataPath>
+													<Width>10</Width>
+													<ContextMenu name="ОборотыПоПартиямОстатокРасходКонтекстноеМеню" id="97"/>
+													<ExtendedTooltip name="ОборотыПоПартиямОстатокРасходРасширеннаяПодсказка" id="98"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямКлючПримВыдано" id="87">
+													<DataPath>ОборотыПоПартиям.КлючПримВыдано</DataPath>
+													<Width>10</Width>
+													<ContextMenu name="ОборотыПоПартиямКлючПримВыданоКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ОборотыПоПартиямКлючПримВыданоРасширеннаяПодсказка" id="89"/>
+												</LabelField>
+												<LabelField name="ОборотыПоПартиямНоменклатура" id="90">
+													<DataPath>ОборотыПоПартиям.Номенклатура</DataPath>
+													<ContextMenu name="ОборотыПоПартиямНоменклатураКонтекстноеМеню" id="91"/>
+													<ExtendedTooltip name="ОборотыПоПартиямНоменклатураРасширеннаяПодсказка" id="92"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="Остатки" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остатки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остатки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОстаткиРасширеннаяПодсказка" id="115"/>
+									<ChildItems>
+										<Table name="ОстаткиПоПартиям" id="116">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ОстаткиПоПартиям</DataPath>
+											<RowPictureDataPath>ОстаткиПоПартиям.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="ОстаткиПоПартиямКонтекстноеМеню" id="117"/>
+											<AutoCommandBar name="ОстаткиПоПартиямКоманднаяПанель" id="118"/>
+											<ExtendedTooltip name="ОстаткиПоПартиямРасширеннаяПодсказка" id="119"/>
+											<SearchStringAddition name="ОстаткиПоПартиямСтрокаПоиска" id="120">
+												<AdditionSource>
+													<Item>ОстаткиПоПартиям</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ОстаткиПоПартиямСтрокаПоискаКонтекстноеМеню" id="121"/>
+												<ExtendedTooltip name="ОстаткиПоПартиямСтрокаПоискаРасширеннаяПодсказка" id="122"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ОстаткиПоПартиямСостояниеПросмотра" id="123">
+												<AdditionSource>
+													<Item>ОстаткиПоПартиям</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ОстаткиПоПартиямСостояниеПросмотраКонтекстноеМеню" id="124"/>
+												<ExtendedTooltip name="ОстаткиПоПартиямСостояниеПросмотраРасширеннаяПодсказка" id="125"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ОстаткиПоПартиямУправлениеПоиском" id="126">
+												<AdditionSource>
+													<Item>ОстаткиПоПартиям</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ОстаткиПоПартиямУправлениеПоискомКонтекстноеМеню" id="127"/>
+												<ExtendedTooltip name="ОстаткиПоПартиямУправлениеПоискомРасширеннаяПодсказка" id="128"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ОстаткиПоПартиямПартия" id="138">
+													<DataPath>ОстаткиПоПартиям.Партия</DataPath>
+													<ContextMenu name="ОстаткиПоПартиямПартияКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="ОстаткиПоПартиямПартияРасширеннаяПодсказка" id="140"/>
+												</LabelField>
+												<LabelField name="ОстаткиПоПартиямБуферОстаток" id="129">
+													<DataPath>ОстаткиПоПартиям.БуферОстаток</DataPath>
+													<Width>11</Width>
+													<ContextMenu name="ОстаткиПоПартиямБуферОстатокКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ОстаткиПоПартиямБуферОстатокРасширеннаяПодсказка" id="131"/>
+												</LabelField>
+												<LabelField name="ОстаткиПоПартиямОстатокОстаток" id="135">
+													<DataPath>ОстаткиПоПартиям.ОстатокОстаток</DataPath>
+													<Width>11</Width>
+													<ContextMenu name="ОстаткиПоПартиямОстатокОстатокКонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="ОстаткиПоПартиямОстатокОстатокРасширеннаяПодсказка" id="137"/>
+												</LabelField>
+												<LabelField name="ОстаткиПоПартиямХарактеристикаБонуса" id="141">
+													<DataPath>ОстаткиПоПартиям.ХарактеристикаБонуса</DataPath>
+													<ContextMenu name="ОстаткиПоПартиямХарактеристикаБонусаКонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="ОстаткиПоПартиямХарактеристикаБонусаРасширеннаяПодсказка" id="143"/>
+												</LabelField>
+												<LabelField name="ОстаткиПоПартиямДнейДоСписания" id="132">
+													<DataPath>ОстаткиПоПартиям.ДнейДоСписания</DataPath>
+													<Width>6</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>6</MaxWidth>
+													<ContextMenu name="ОстаткиПоПартиямДнейДоСписанияКонтекстноеМеню" id="133"/>
+													<ExtendedTooltip name="ОстаткиПоПартиямДнейДоСписанияРасширеннаяПодсказка" id="134"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.bon_НоминальныеОбъекты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Счета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийbon_ТелефоныНомОбъектов.Сотовый КАК Сотовый,
+	РегистрСведенийbon_ТелефоныНомОбъектов.Основной КАК Основной,
+	РегистрСведенийbon_ТелефоныНомОбъектов.bon_НоминальныеОбъекты КАК bon_НоминальныеОбъекты,
+	РегистрСведенийbon_ТелефоныНомОбъектов.Контрагенты КАК Контрагенты
+ИЗ
+	РегистрСведений.bon_ТелефоныНомОбъектов КАК РегистрСведенийbon_ТелефоныНомОбъектов
+ГДЕ
+	РегистрСведенийbon_ТелефоныНомОбъектов.bon_НоминальныеОбъекты = &amp;bon_НоминальныеОбъектыСыл</QueryText>
+				<MainTable>InformationRegister.bon_ТелефоныНомОбъектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>bon_НоминальныеОбъекты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Контрагенты</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Основной</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Сотовый</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Основной</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОборотыПоПартиям" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обороты по партиям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	bon_ПартииБонусовНаСчетахОбороты.Период КАК Период,
+	bon_ПартииБонусовНаСчетахОбороты.Регистратор КАК Регистратор,
+	bon_ПартииБонусовНаСчетахОбороты.Партия КАК Партия,
+	bon_ПартииБонусовНаСчетахОбороты.Регистратор.Дата КАК ДатаНачислени,
+	bon_ПартииБонусовНаСчетахОбороты.Номенклатура КАК Номенклатура,
+	bon_ПартииБонусовНаСчетахОбороты.КлючПримВыдано,
+	bon_ПартииБонусовНаСчетахОбороты.ХарактеристикаБонуса КАК ХарактеристикаБонуса,
+	bon_ПартииБонусовНаСчетахОбороты.БуферПриход КАК БуферПриход,
+	bon_ПартииБонусовНаСчетахОбороты.БуферРасход КАК БуферРасход,
+	bon_ПартииБонусовНаСчетахОбороты.ОстатокПриход КАК ОстатокПриход,
+	bon_ПартииБонусовНаСчетахОбороты.ОстатокРасход КАК ОстатокРасход
+ИЗ
+	РегистрНакопления.bon_ПартииБонусовНаСчетах.Обороты(&amp;ППериодОборН, &amp;ППериодОборК, Регистратор, ) КАК bon_ПартииБонусовНаСчетахОбороты
+ГДЕ
+	bon_ПартииБонусовНаСчетахОбороты.НоминальныйОбъект = &amp;ССылка
+
+УПОРЯДОЧИТЬ ПО
+	Период</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОстаткиПоПартиям" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки по партиям</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	bon_ПартииБонусовНаСчетахОстатки.Партия КАК Партия,
+	bon_ПартииБонусовНаСчетахОстатки.БуферОстаток КАК БуферОстаток,
+	bon_ПартииБонусовНаСчетахОстатки.ОстатокОстаток КАК ОстатокОстаток,
+	bon_ПартииБонусовНаСчетахОстатки.ХарактеристикаБонуса,
+	bon_ПартииБонусовНаСчетахОстатки.ХарактеристикаБонуса.ВремяЖизниОстатков - (РАЗНОСТЬДАТ(bon_ПартииБонусовНаСчетахОстатки.Партия.Дата, &amp;ППериод, ДЕНЬ) + bon_ПартииБонусовНаСчетахОстатки.ХарактеристикаБонуса.ВремяЖизниБуфера) КАК ДнейДоСписания
+ИЗ
+	РегистрНакопления.bon_ПартииБонусовНаСчетах.Остатки(&amp;ППериод, ) КАК bon_ПартииБонусовНаСчетахОстатки
+ГДЕ
+	bon_ПартииБонусовНаСчетахОстатки.НоминальныйОбъект = &amp;ССылка
+УПОРЯДОЧИТЬ ПО
+	ДнейДоСписания,
+	Партия</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьИтоги" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить итоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИтоги</Action>
+		</Command>
+	</Commands>
+</Form>

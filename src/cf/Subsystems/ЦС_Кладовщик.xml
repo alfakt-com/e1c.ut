@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="668eba27-961f-4632-84b7-184edff95253">
+		<Properties>
+			<Name>ЦС_Кладовщик</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кладовщик</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.РазделСклад16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализОстатковТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">66097917-fda5-48d8-b87b-01bbf2185c0f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">9f56ec55-3805-42ba-b988-5d6d0ac3b8fa</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a9ec53c5-ccc9-4aa8-bab6-7fab5f257edb</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоПартиямТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоТоварамНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьПоТоварамОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиИДоступностьТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПоступлениеИОтгрузкаТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварыКОтгрузке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварыКПоступлению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварыНаСкладахПоСрокамГодности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">042e4251-ec60-4a24-a4b7-72ae32b4fc42</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1f9c1f55-9711-40ff-9d1c-3716f91d723f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">67d51de4-8de2-45cd-a819-b17a2cdb513b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">dd7f5256-98e6-4e1b-9068-106052c9e728</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b7f46df9-2704-42d1-9a3c-b398672d0353</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">fd54a400-0d36-11e6-ec9a-7c7a916692a2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5da7686a-bb8c-4ac4-a2b4-838bcde3b4c2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">dc42eaa1-4470-4724-a1ba-4440fe76ba18</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b5c49dd3-ae38-437b-9f61-951081c21217</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6f887b17-a8f1-4e70-98bd-59dbfaa1a389</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ce26f7e9-8638-400d-911a-6d16a79ace60</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7bd0ffc3-9a98-4e81-995e-5b491fb8786d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">39b04127-6f30-4138-b877-ba3cf785ac7b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7acc4d1d-261e-498c-a7aa-65434e3f450d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиПродажи</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Докмуенты</Subsystem>
+			<Subsystem>Справочники</Subsystem>
+			<Subsystem>Отчеты</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

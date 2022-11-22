@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="54">
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<UsualGroup name="Группа8" id="101">
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="102"/>
+					<ChildItems>
+						<InputField name="НомерКарты" id="10">
+							<DataPath>Объект.НомерКарты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер телефона</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<MultiLine>false</MultiLine>
+							<ContextMenu name="НомерКартыКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="НомерКартыРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ТелефонПартнераФизЛицо" id="137">
+							<DataPath>ТелефонПартнераФизЛицо</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ТелефонПартнераФизЛицоКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="ТелефонПартнераФизЛицоРасширеннаяПодсказка" id="139"/>
+						</InputField>
+						<Button name="РедактироватьДанные" id="52">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<Enabled>false</Enabled>
+							<CommandName>Form.Command.РедактироватьДанные</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактировать данные</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РедактироватьДанныеРасширеннаяПодсказка" id="53"/>
+						</Button>
+						<Button name="Найти" id="145">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Найти</CommandName>
+							<ExtendedTooltip name="НайтиРасширеннаяПодсказка" id="146"/>
+						</Button>
+						<UsualGroup name="Группа6" id="97">
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<Button name="ПроверитьБонусныйСчет" id="88">
+									<Type>UsualButton</Type>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.ПроверитьБонусныйСчет</CommandName>
+									<ExtendedTooltip name="ПроверитьБонусныйСчетРасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="РаспечататьАнкетуКоманд" id="90">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РаспечататьАнкетуКоманд</CommandName>
+									<ExtendedTooltip name="РаспечататьАнкетуКомандРасширеннаяПодсказка" id="91"/>
+								</Button>
+								<CheckBoxField name="ДанныеСверены" id="92">
+									<DataPath>Объект.ДанныеСверены</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>(Третье) Данные сверены с анкетой?</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#BA0303</TitleTextColor>
+									<TitleFont ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДанныеСвереныКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ДанныеСвереныРасширеннаяПодсказка" id="94"/>
+									<Events>
+										<Event name="OnChange">ДанныеСвереныПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="РаспечататьАнкету1" id="95">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РаспечататьАнкету1</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>(Четвертое) Регистрация</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="РаспечататьАнкету1РасширеннаяПодсказка" id="96"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа7" id="99">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<Button name="СоздатьБонусный" id="103">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.СоздатьБонусный</CommandName>
+							<ExtendedTooltip name="СоздатьБонусныйРасширеннаяПодсказка" id="104"/>
+						</Button>
+						<Button name="ПроверитьПоФамилии" id="133">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.ПроверитьПоФамилии</CommandName>
+							<ExtendedTooltip name="ПроверитьПоФамилииРасширеннаяПодсказка" id="134"/>
+						</Button>
+						<InputField name="НоменальныйОбъект" id="64">
+							<DataPath>Объект.НоменальныйОбъект</DataPath>
+							<Enabled>false</Enabled>
+							<ContextMenu name="НоменальныйОбъектКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="НоменальныйОбъектРасширеннаяПодсказка" id="66"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Надпись1" id="49">
+			<TextColor>#D90000</TextColor>
+			<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="Надпись1КонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="Надпись1РасширеннаяПодсказка" id="51"/>
+		</LabelDecoration>
+		<InputField name="ФизическоеЛицо" id="34">
+			<DataPath>Объект.ФизическоеЛицо</DataPath>
+			<Enabled>false</Enabled>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<UsualGroup name="Группа3" id="58">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="56">
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="Фамилия" id="1">
+							<DataPath>Объект.Фамилия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФамилияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="EditTextChange">ФамилияИзменениеТекстаРедактирования</Event>
+							</Events>
+						</InputField>
+						<InputField name="Имя" id="4">
+							<DataPath>Объект.Имя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИмяКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Отчество" id="7">
+							<DataPath>Объект.Отчество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтчествоКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="60">
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<InputField name="ДатаРождения" id="19">
+							<DataPath>Объект.ДатаРождения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="Пол" id="25">
+							<DataPath>Объект.Пол</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПолКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа9" id="124">
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<UsualGroup name="Группа10" id="135">
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="136"/>
+							<ChildItems>
+								<Button name="НетСовпадений" id="126">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.НетСовпадений</CommandName>
+									<Font bold="true" kind="AutoFont"/>
+									<ExtendedTooltip name="НетСовпаденийРасширеннаяПодсказка" id="127"/>
+								</Button>
+								<Button name="ПрявязатьНомерККонтрагенту" id="131">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.ПрявязатьНомерККонтрагенту</CommandName>
+									<Font bold="true" kind="AutoFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Привязать Номер</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПрявязатьНомерККонтрагентуРасширеннаяПодсказка" id="132"/>
+								</Button>
+								<Button name="СоздатьБонусный1" id="147">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.СоздатьБонусный</CommandName>
+									<ExtendedTooltip name="СоздатьБонусный1РасширеннаяПодсказка" id="148"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СовпаденияПоФИО" id="105">
+							<Representation>List</Representation>
+							<Visible>false</Visible>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СовпаденияПоФИО</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СовпаденияПоФИОКонтекстноеМеню" id="106"/>
+							<AutoCommandBar name="СовпаденияПоФИОКоманднаяПанель" id="107">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СовпаденияПоФИОРасширеннаяПодсказка" id="108"/>
+							<SearchStringAddition name="СовпаденияПоФИОСтрокаПоиска" id="109">
+								<AdditionSource>
+									<Item>СовпаденияПоФИО</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СовпаденияПоФИОСтрокаПоискаКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="СовпаденияПоФИОСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СовпаденияПоФИОСостояниеПросмотра" id="112">
+								<AdditionSource>
+									<Item>СовпаденияПоФИО</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СовпаденияПоФИОСостояниеПросмотраКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="СовпаденияПоФИОСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СовпаденияПоФИОУправлениеПоиском" id="115">
+								<AdditionSource>
+									<Item>СовпаденияПоФИО</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СовпаденияПоФИОУправлениеПоискомКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="СовпаденияПоФИОУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СовпаденияПоФИОВыбрать" id="128">
+									<DataPath>СовпаденияПоФИО.Выбрать</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СовпаденияПоФИОВыбратьКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="СовпаденияПоФИОВыбратьРасширеннаяПодсказка" id="130"/>
+									<Events>
+										<Event name="OnChange">СовпаденияПоФИОВыбратьПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="СовпаденияПоФИОКонтрагент" id="118">
+									<DataPath>СовпаденияПоФИО.Контрагент</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СовпаденияПоФИОКонтрагентКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="СовпаденияПоФИОКонтрагентРасширеннаяПодсказка" id="120"/>
+								</InputField>
+								<InputField name="СовпаденияПоФИОДатаРождения" id="121">
+									<DataPath>СовпаденияПоФИО.ДатаРождения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СовпаденияПоФИОДатаРожденияКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="СовпаденияПоФИОДатаРожденияРасширеннаяПодсказка" id="123"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="62">
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="Значение" id="152">
+					<DataPath>Объект.Значение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Город Контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<QuickChoice>false</QuickChoice>
+					<ContextMenu name="ЗначениеКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="154"/>
+					<Events>
+						<Event name="StartChoice">ЗначениеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОткудаВыОНасУзнали" id="140">
+					<DataPath>Объект.ОткудаВыОНасУзнали</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<QuickChoice>true</QuickChoice>
+					<ContextMenu name="ОткудаВыОНасУзналиКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="ОткудаВыОНасУзналиРасширеннаяПодсказка" id="142"/>
+				</InputField>
+				<UsualGroup name="Группа11" id="143">
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<CheckBoxField name="УведомлятьОПроведенииАкции" id="22">
+							<DataPath>Объект.УведомлятьОПроведенииАкции</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УведомлятьОПроведенииАкцииКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="УведомлятьОПроведенииАкцииРасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+						<InputField name="Емаил" id="28">
+							<DataPath>Объект.Емаил</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЕмаилКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ЕмаилРасширеннаяПодсказка" id="30"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="СвойствоДОП" id="158">
+					<ContextMenu name="СвойствоДОПКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="СвойствоДОПРасширеннаяПодсказка" id="160"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ЗначениеДОП" id="155">
+			<ContextMenu name="ЗначениеДОПКонтекстноеМеню" id="156"/>
+			<ExtendedTooltip name="ЗначениеДОПРасширеннаяПодсказка" id="157"/>
+		</InputField>
+		<UsualGroup name="ВсеТелефоныПоНоменальному" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все телефоны по номенальному</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все телефоны по номенальному</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<ExtendedTooltip name="ВсеТелефоныПоНоменальномуРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<Table name="ТелефоныПоНоменальному" id="69">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>30</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>30</MaxWidth>
+					<Height>7</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>7</MaxHeight>
+					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<Output>Disable</Output>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТелефоныПоНоменальному</DataPath>
+					<RowPictureDataPath>ТелефоныПоНоменальному.DefaultPicture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Choose</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Create</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>ListSettings</ExcludedCommand>
+						<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>Refresh</ExcludedCommand>
+						<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+					</CommandSet>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<AutoRefresh>true</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ТелефоныПоНоменальномуКонтекстноеМеню" id="70"/>
+					<AutoCommandBar name="ТелефоныПоНоменальномуКоманднаяПанель" id="71"/>
+					<ExtendedTooltip name="ТелефоныПоНоменальномуРасширеннаяПодсказка" id="72"/>
+					<SearchStringAddition name="ТелефоныПоНоменальномуСтрокаПоиска" id="73">
+						<AdditionSource>
+							<Item>ТелефоныПоНоменальному</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныПоНоменальномуСтрокаПоискаКонтекстноеМеню" id="74"/>
+						<ExtendedTooltip name="ТелефоныПоНоменальномуСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТелефоныПоНоменальномуСостояниеПросмотра" id="76" DisplayImportance="VeryLow">
+						<ToolTipRepresentation>None</ToolTipRepresentation>
+						<AdditionSource>
+							<Item>ТелефоныПоНоменальному</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныПоНоменальномуСостояниеПросмотраКонтекстноеМеню" id="77"/>
+						<ExtendedTooltip name="ТелефоныПоНоменальномуСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТелефоныПоНоменальномуУправлениеПоиском" id="79">
+						<AdditionSource>
+							<Item>ТелефоныПоНоменальному</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныПоНоменальномуУправлениеПоискомКонтекстноеМеню" id="80"/>
+						<ExtendedTooltip name="ТелефоныПоНоменальномуУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ТелефоныПоНоменальномуОсновной" id="82">
+							<DataPath>ТелефоныПоНоменальному.Основной</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Осн.</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТелефоныПоНоменальномуОсновнойКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ТелефоныПоНоменальномуОсновнойРасширеннаяПодсказка" id="84"/>
+						</CheckBoxField>
+						<LabelField name="ТелефоныПоНоменальномуСотовый" id="85">
+							<DataPath>ТелефоныПоНоменальному.Сотовый</DataPath>
+							<ContextMenu name="ТелефоныПоНоменальномуСотовыйКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ТелефоныПоНоменальномуСотовыйРасширеннаяПодсказка" id="87"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.bon_РегистрацияБонусногоСчетаКлиента</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТелефоныПоНоменальному" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефоны по номенальному</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	bon_ТелефоныНомОбъектов.bon_НоминальныеОбъекты КАК bon_НоминальныеОбъекты
+ПОМЕСТИТЬ НомОбъ
+ИЗ
+	РегистрСведений.bon_ТелефоныНомОбъектов КАК bon_ТелефоныНомОбъектов
+ГДЕ
+	bon_ТелефоныНомОбъектов.Сотовый = &amp;Сотовый
+
+СГРУППИРОВАТЬ ПО
+	bon_ТелефоныНомОбъектов.bon_НоминальныеОбъекты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	bon_ТелефоныНомОбъектов.Основной КАК Основной,
+	bon_ТелефоныНомОбъектов.Сотовый КАК Сотовый
+ИЗ
+	НомОбъ КАК НомОбъ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.bon_ТелефоныНомОбъектов КАК bon_ТелефоныНомОбъектов
+		ПО НомОбъ.bon_НоминальныеОбъекты = bon_ТелефоныНомОбъектов.bon_НоминальныеОбъекты</QueryText>
+				<MainTable>InformationRegister.bon_ТелефоныНомОбъектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Основной</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Сотовый</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Основной</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПартнерВыбор" id="3">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СозданиеВыполнено" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание выполнено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФиоПохожее" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фио похожее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СовпаденияПоФИО" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Совпадения по ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаРождения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата рождения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Выбрать" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТелефонПартнераФизЛицо" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТелефонПартнераФизЛицоЗначенияПолей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон партнера физ лицо значения полей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РедактироватьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РедактироватьДанные</Action>
+		</Command>
+		<Command name="ПроверитьБонусныйСчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(Первое) Проверка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить бонусный счет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьБонусныйСчет</Action>
+		</Command>
+		<Command name="РаспечататьАнкетуКоманд" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(Второе) Анкета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать анкету команд</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспечататьАнкетуКоманд</Action>
+		</Command>
+		<Command name="РаспечататьАнкету1" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать анкету1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать анкету1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспечататьАнкету1</Action>
+		</Command>
+		<Command name="СоздатьБонусный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать бонусный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать бонусный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьБонусный</Action>
+		</Command>
+		<Command name="НетСовпадений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет совпадений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет совпадений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НетСовпадений</Action>
+		</Command>
+		<Command name="ПрявязатьНомерККонтрагенту" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прявязать номер к контрагенту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прявязать номер к контрагенту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрявязатьНомерККонтрагенту</Action>
+		</Command>
+		<Command name="ПроверитьПоФамилии" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить по фамилии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить по фамилии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПоФамилии</Action>
+		</Command>
+		<Command name="Найти" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиКоманда</Action>
+		</Command>
+	</Commands>
+</Form>

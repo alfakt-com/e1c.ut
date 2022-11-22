@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.НастройкаОбменаСПорталом">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ВыполнитьПолнуюСинхронизацию">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ВыполнитьСинхронизациюИзменений">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ДобавитьНаНачальнуюСтраницу">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ЗапуститьРежимРеальногоВремениДляПортала">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ТаблицаИзменений">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ИсторияСинхронизаций">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.Б24_ВыполнитьПолнуюСинхронизацию">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="CommonCommand.Б24_ОбщиеНастройки">
+			<CommandGroup>CommandGroup.Б24_Настройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_НастройкиСинхронизации">
+			<CommandGroup>CommandGroup.Б24_Настройки</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ИсторияСинхронизаций">
+			<CommandGroup>CommandGroup.Б24_Отладка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ТаблицаИзменений">
+			<CommandGroup>CommandGroup.Б24_Отладка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ИдентификаторыБитрикс24">
+			<CommandGroup>CommandGroup.Б24_Отладка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ПроверитьВерсию">
+			<CommandGroup>CommandGroup.Б24_Поддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_НаписатьТикетВТехподдержку">
+			<CommandGroup>CommandGroup.Б24_Поддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ПерейтиНаДокументацию">
+			<CommandGroup>CommandGroup.Б24_Поддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ПерейтиНаФормумИнтеграции">
+			<CommandGroup>CommandGroup.Б24_Поддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Б24_ПосмотретьВебинарыПоИнтеграцииС1С">
+			<CommandGroup>CommandGroup.Б24_Поддержка</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>CommandGroup.Б24_Настройки</Group>
+		<Group>CommandGroup.Б24_Отладка</Group>
+		<Group>ActionsPanelTools</Group>
+		<Group>CommandGroup.Б24_Поддержка</Group>
+	</GroupsOrder>
+</CommandInterface>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="c136d4f5-8b55-44c5-8d25-f1bcdef2fec8">
+		<Properties>
+			<Name>Битрикс</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1С-Битрикс</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Б24_КартинкаПодсистемы</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="498" y="136"/>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Б24_КартинкаПодсистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_ОбщегоНазначенияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Б24_ВыполнениеДлительнойОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ПерейтиНаФормумИнтеграции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ПосмотретьВебинарыПоИнтеграцииС1С</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ПерейтиНаДокументацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_НаписатьТикетВТехподдержку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_ОбщегоНазначенияПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_Логирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ИнформацияООтправленныхТикетах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Б24_ТипыСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ИдентификаторыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ИнформацияОЗаказах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ИсторияВыполненияСинхронизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ПакетыВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_СвойстваПозицийЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ТаблицаИзменений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ТаблицаПроверкиОбъектовНаВыгрузкуВРежимеРеальногоВремени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_ТокеныОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Б24_УстановленныеКонтактыВДокументах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Б24_НастройкаОбменаСПорталом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Б24_ТипыДанныхДляОбменаСПорталом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Б24_НастройкиСинхронизацииСБитрикс24</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Б24_ПользовательскиеГруппыТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_RestApiВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_RestApiКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_ВыгрузкаВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_ЗагрузкаВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_СинхронизацияВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_СинхронизацияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_СинхронизацияПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Б24_СинхронизацияРегистрацияИзмененийВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Б24_Роль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.Б24_ЗарегистрироватьИзмененияПриЗаписиСправочникаИДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.Б24_ЗарегистрироватьИзмененияПередЗаписьюРегистраСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.Б24_ЗаданиеСинхронизацииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.Б24_ОбъектыВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Б24_ОбщиеНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Б24_ПроверитьНаОбновления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Б24_НаписатьТикетВТехподдержку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ИсторияСинхронизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ТаблицаИзменений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ИдентификаторыБитрикс24</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ОбщиеНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_НастройкиСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ВыполнитьПолнуюСинхронизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ВыполнитьСинхронизациюИзменений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ЗапуститьРежимРеальногоВремени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ПроверитьВерсию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Б24_ОстановитьРежимРеальногоВремени</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Б24_Поддержка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Б24_Отладка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Б24_Синхронизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Б24_Настройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Б24_Б24Лого2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Б24_Б24Лого</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Битрикс24</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

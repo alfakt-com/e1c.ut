@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<EventSubscription uuid="062fffa8-95fc-4a68-bede-e3caf349f4e6">
+		<Properties>
+			<Name>swПередЗаписьюСкладскихДвижений</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перед записью складских движений</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Source>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ДвиженияНоменклатураНоменклатура</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ПланыПродаж</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ГрафикПоступленияТоваров</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ЗаказыКлиентов</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ОбеспечениеЗаказов</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.swПродажиПартийТоваровОрганизаций</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ВыручкаИСебестоимостьПродаж</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ЗаказыНаВнутреннееПотребление</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ПланыЗакупок</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ПланыСборкиРазборки</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ДвиженияНоменклатураДоходыРасходы</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.swПартииТоваровОрганизаций</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ТоварыКОтгрузке</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.СвободныеОстатки</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ПланыПотребленияКомплектующих</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ТоварыКПоступлению</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ТоварыКОформлениюЗаявленийОВвозе</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ГрафикОтгрузкиТоваров</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ДвиженияСерийТоваров</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.Закупки</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ПланыПродажПоКатегориям</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ЗаказыПоставщикам</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ДвижениеТоваров</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ТоварыКОформлениюИзлишковНедостач</v8:Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ТоварыНаСкладах</v8:Type>
+			</Source>
+			<Event>BeforeWrite</Event>
+			<Handler>CommonModule.swПодпискиНаСобытия.ПередЗаписьюСкладскихДвижений</Handler>
+		</Properties>
+	</EventSubscription>
+</MetaDataObject>

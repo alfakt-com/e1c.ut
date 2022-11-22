@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КомандаЗагрузитьИдПлательщиков" id="28">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.КомандаЗагрузитьИдПлательщиков</CommandName>
+				<ExtendedTooltip name="КомандаЗагрузитьИдПлательщиковРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Портал" id="25">
+			<DataPath>Запись.Портал</DataPath>
+			<DropListButton>true</DropListButton>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ПорталКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПорталРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ТипДанных" id="16">
+			<DataPath>Запись.ТипДанных</DataPath>
+			<ContextMenu name="ТипДанныхКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТипДанныхРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ТипДанныхПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Объект" id="1">
+			<DataPath>Запись.Объект</DataPath>
+			<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+			<ContextMenu name="ОбъектКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПодчиненныйОбъект" id="22">
+			<DataPath>Запись.ПодчиненныйОбъект</DataPath>
+			<ContextMenu name="ПодчиненныйОбъектКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПодчиненныйОбъектРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Идентификатор" id="7">
+			<DataPath>Запись.Идентификатор</DataPath>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ДополнительныйИдентификатор" id="19">
+			<DataPath>Запись.ДополнительныйИдентификатор</DataPath>
+			<ContextMenu name="ДополнительныйИдентификаторКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДополнительныйИдентификаторРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Версия" id="10">
+			<ContextMenu name="ВерсияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИдентификторСайта" id="4">
+			<ContextMenu name="ИдентификторСайтаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИдентификторСайтаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Б24_ИдентификаторыОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗагрузитьИдПлательщиков" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить плательщиков с Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда загрузить ид плательщиков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗагрузитьИдПлательщиков</Action>
+		</Command>
+	</Commands>
+</Form>

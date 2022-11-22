@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="c6dd2db6-d6f8-4344-8a5b-e9dce183c702">
+		<Properties>
+			<Name>Табак</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табак</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Табак</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияМОТПКлиентСерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтерфейсМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыКодовМаркировкиМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроверкаНаличияПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтерфейсМОТПСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.РегистрацияПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ДанныеКлючаСессииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.НастройкиОбменаГИСМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроверкаИПодборТабачнойПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыПроверкиИПодбораЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыПроверкиНаличияАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТППереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТПКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДетализацияСтруктурыХраненияТабачнойПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КонтролироватьСтатусыКодовМаркировкиМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПрочиеЗоныПересчетаПродукцииИСМП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТПКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеМОТПКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТПВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтерфейсМОТПКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КонтролироватьСтатусыКодовМаркировкиВРозницеМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаОбязательнойМаркировкиТабачнойПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетТабачнойПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетТабачнойПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияМОТПВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеМОТПКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СканированиеАкцизнойМаркиМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ШтрихкодированиеМОТППереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.УточнениеПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.УведомлениеОбАгрегированииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.СписаниеПродукцииМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.КонтролироватьСтатусыКодовМаркировкиВРозницеМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкаОбменаГИСМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.КонтролироватьСтатусыКодовМаркировкиМОТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЧекККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОсобенностиУчетаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыПродукцииИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШтрихкодыУпаковокТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТПУТКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроверкаИПодборПродукцииМОТПУТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияМОТПУТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияМОТПУТКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИСМПТВыбытиеКодовМаркировкиСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИСМПТВыбытиеКодовМаркировкиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИСМПТВыбытиеКодовМаркировкиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИСМПТВыбытиеКодовМаркировкиВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыШтрихкодов</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

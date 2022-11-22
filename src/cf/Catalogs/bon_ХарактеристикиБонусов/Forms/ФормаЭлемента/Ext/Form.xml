@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="64">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Родитель" id="7">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВидБонуса" id="19">
+			<DataPath>Объект.ВидБонуса</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидБонусаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВидБонусаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<Pages name="Группа2" id="66">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<Page name="Группа3" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="70">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка по Начислению и Списанию</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="71"/>
+							<ChildItems>
+								<UsualGroup name="Группа5" id="72">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="73"/>
+									<ChildItems>
+										<InputField name="ВремяЖизниБуфера" id="10">
+											<DataPath>Объект.ВремяЖизниБуфера</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВремяЖизниБуфераКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ВремяЖизниБуфераРасширеннаяПодсказка" id="12"/>
+										</InputField>
+										<InputField name="ВремяЖизниОстатков" id="13">
+											<DataPath>Объект.ВремяЖизниОстатков</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВремяЖизниОстатковКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ВремяЖизниОстатковРасширеннаяПодсказка" id="15"/>
+										</InputField>
+										<CheckBoxField name="ВозвратНаОстаток" id="61">
+											<DataPath>Объект.ВозвратНаОстаток</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возврат на остаток</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВозвратНаОстатокКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="ВозвратНаОстатокРасширеннаяПодсказка" id="63"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа6" id="74">
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="75"/>
+									<ChildItems>
+										<CheckBoxField name="ПоДате" id="28">
+											<DataPath>Объект.ПоДате</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Включить Настройку по Датае</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПоДатеКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ПоДатеРасширеннаяПодсказка" id="30"/>
+											<Events>
+												<Event name="OnChange">ПоДатеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="Группа7" id="76">
+											<Group>AlwaysHorizontal</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="77"/>
+											<ChildItems>
+												<InputField name="ДатаПереводаИзБуферавОстаток" id="31">
+													<DataPath>Объект.ДатаПереводаИзБуферавОстаток</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДатаПереводаИзБуферавОстатокКонтекстноеМеню" id="32"/>
+													<ExtendedTooltip name="ДатаПереводаИзБуферавОстатокРасширеннаяПодсказка" id="33"/>
+												</InputField>
+												<InputField name="ДатаСписанияОстаток" id="34">
+													<DataPath>Объект.ДатаСписанияОстаток</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДатаСписанияОстатокКонтекстноеМеню" id="35"/>
+													<ExtendedTooltip name="ДатаСписанияОстатокРасширеннаяПодсказка" id="36"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="78">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для Сертификатов</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<InputField name="ДатаНачала" id="22">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ДатаКонец" id="25">
+									<DataPath>Объект.ДатаКонец</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонецКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ДатаКонецРасширеннаяПодсказка" id="27"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа9" id="80">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отрицательные Остатки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="81"/>
+							<ChildItems>
+								<InputField name="ВремяЖизниОтрицательныхОстатков" id="37">
+									<DataPath>Объект.ВремяЖизниОтрицательныхОстатков</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВремяЖизниОтрицательныхОстатковКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ВремяЖизниОтрицательныхОстатковРасширеннаяПодсказка" id="39"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа10" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СМС Уведомление</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<CheckBoxField name="ВключитьОНачисление" id="40">
+							<DataPath>Объект.ВключитьОНачисление</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Включить</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВключитьОНачислениеКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ВключитьОНачислениеРасширеннаяПодсказка" id="42"/>
+							<Events>
+								<Event name="OnChange">ВключитьОНачислениеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="Группа11" id="84">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<InputField name="ОтСуммыБонусовУведОНачисл" id="55">
+									<DataPath>Объект.ОтСуммыБонусовУведОНачисл</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтСуммыБонусовУведОНачислКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ОтСуммыБонусовУведОНачислРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="ДоСуммыБонусовУведОНачисл" id="58">
+									<DataPath>Объект.ДоСуммыБонусовУведОНачисл</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоСуммыБонусовУведОНачислКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ДоСуммыБонусовУведОНачислРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа12" id="86">
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1" id="88">
+									<Width>64</Width>
+									<TextColor>#1B24E4</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="true" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пример: Успейте потратить кэшбек до Дата или 01.01.0001. Проверить баланс: bit.ly/2WLMbXw</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="90"/>
+								</LabelDecoration>
+								<InputField name="ТекстСМСОНачислении" id="46">
+									<DataPath>Объект.ТекстСМСОНачислении</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст СМС о Начислении</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекстСМСОНачисленииКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ТекстСМСОНачисленииРасширеннаяПодсказка" id="48"/>
+								</InputField>
+								<LabelDecoration name="Декорация2" id="91">
+									<Width>58</Width>
+									<TextColor>#AC0000</TextColor>
+									<Font bold="true" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизиты: "Дата" и "Сумма". Эти параметры необходимы для вывода в тексте СМС. </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="93"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация3" id="94">
+									<Width>67</Width>
+									<TextColor>#AC0000</TextColor>
+									<Font bold="true" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата- Это Дата списания бонусов. Если дату указать как 01.01.0001 то смс будет отправленна с данной датой!</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="96"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация4" id="97">
+									<Width>50</Width>
+									<TextColor>#AC0000</TextColor>
+									<Font bold="true" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма - это сумма итога на дату отправки по текущей Характеристике</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="99"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="16">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.bon_ХарактеристикиБонусов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

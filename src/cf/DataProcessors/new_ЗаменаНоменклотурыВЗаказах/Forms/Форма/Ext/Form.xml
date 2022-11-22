@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="14">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<InputField name="Заказ" id="1">
+					<DataPath>Объект.Заказ</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>60</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>60</MaxWidth>
+					<DropListWidth>60</DropListWidth>
+					<ContextMenu name="ЗаказКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ЗаказРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ЗаказПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="Заменить" id="12">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Заменить</CommandName>
+					<Font bold="true" kind="AutoFont"/>
+					<ExtendedTooltip name="ЗаменитьРасширеннаяПодсказка" id="13"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНоменклатура" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклотура</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номенклатура</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаНоменклатураРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="НоменклотуруЗаменитьС" id="4">
+					<DataPath>Объект.НоменклотуруЗаменитьС</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>60</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>60</MaxWidth>
+					<DropListWidth>60</DropListWidth>
+					<ContextMenu name="НоменклотуруЗаменитьСКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НоменклотуруЗаменитьСРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="НоменклотуруЗаменитьНа" id="7">
+					<DataPath>Объект.НоменклотуруЗаменитьНа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>60</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>60</MaxWidth>
+					<DropListWidth>60</DropListWidth>
+					<ContextMenu name="НоменклотуруЗаменитьНаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НоменклотуруЗаменитьНаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<Table name="ТабТовар" id="16">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ТабТовар</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТабТоварКонтекстноеМеню" id="17"/>
+					<AutoCommandBar name="ТабТоварКоманднаяПанель" id="18">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТабТоварРасширеннаяПодсказка" id="19"/>
+					<SearchStringAddition name="ТабТоварСтрокаПоиска" id="20">
+						<AdditionSource>
+							<Item>ТабТовар</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабТоварСтрокаПоискаКонтекстноеМеню" id="21"/>
+						<ExtendedTooltip name="ТабТоварСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТабТоварСостояниеПросмотра" id="23">
+						<AdditionSource>
+							<Item>ТабТовар</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабТоварСостояниеПросмотраКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ТабТоварСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТабТоварУправлениеПоиском" id="26">
+						<AdditionSource>
+							<Item>ТабТовар</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабТоварУправлениеПоискомКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ТабТоварУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ТабТоварВыбор" id="53">
+							<DataPath>Объект.ТабТовар.Выбор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТабТоварВыборКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТабТоварВыборРасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="OnChange">ТабТоварВыборПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelField name="ТабТоварНомерСтроки" id="29">
+							<DataPath>Объект.ТабТовар.LineNumber</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>2</MaxWidth>
+							<ContextMenu name="ТабТоварНомерСтрокиКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ТабТоварНомерСтрокиРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<InputField name="ТабТоварНоменклатура" id="32">
+							<DataPath>Объект.ТабТовар.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабТоварНоменклатураКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ТабТоварНоменклатураРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<InputField name="ТабТоварКоличество" id="35">
+							<DataPath>Объект.ТабТовар.Количество</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<Width>6</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>6</MaxWidth>
+							<ContextMenu name="ТабТоварКоличествоКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ТабТоварКоличествоРасширеннаяПодсказка" id="37"/>
+						</InputField>
+						<InputField name="ТабТоварВидЦены" id="38">
+							<DataPath>Объект.ТабТовар.ВидЦены</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>15</MaxWidth>
+							<ContextMenu name="ТабТоварВидЦеныКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ТабТоварВидЦеныРасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<InputField name="ТабТоварЦена" id="41">
+							<DataPath>Объект.ТабТовар.Цена</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>10</MaxWidth>
+							<ContextMenu name="ТабТоварЦенаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ТабТоварЦенаРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="ТабТоварСумма" id="44">
+							<DataPath>Объект.ТабТовар.Сумма</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<Width>10</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>10</MaxWidth>
+							<ContextMenu name="ТабТоварСуммаКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТабТоварСуммаРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="ТабТоварКлючСтроки" id="47">
+							<DataPath>Объект.ТабТовар.КлючСтроки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<ContextMenu name="ТабТоварКлючСтрокиКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ТабТоварКлючСтрокиРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<CheckBoxField name="ТабТоварnew_ЭтоСпецЦена" id="50">
+							<DataPath>Объект.ТабТовар.new_ЭтоСпецЦена</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТабТоварnew_ЭтоСпецЦенаКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТабТоварnew_ЭтоСпецЦенаРасширеннаяПодсказка" id="52"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.new_ЗаменаНоменклотурыВЗаказах</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заменить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заменить</Action>
+		</Command>
+	</Commands>
+</Form>

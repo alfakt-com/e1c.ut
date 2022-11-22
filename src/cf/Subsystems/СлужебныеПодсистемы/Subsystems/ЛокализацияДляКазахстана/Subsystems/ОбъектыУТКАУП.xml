@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="0112b8c2-d96f-4971-898d-1d2fb0c6dcec">
+		<Properties>
+			<Name>ОбъектыУТКАУП</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты УТ3, КА2, УП2</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технологическая подсистема.
+Включает в себя объекты, добавленные при локализации и относящиеся к конфигурациям УТ3, КА2, УП2.</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыУТК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УчетНДСПроведениеСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РегламентированнаяОтчетностьУПК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтключенныйФункционалСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РозничныеПродажиДляКазахстана</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОтключенныйФункционалПередЗаписьюКонстанты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОтключенныйФункционалПередЗаписьюРегистраСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ОтключенныйФункционал</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ГеографическаяСхемаКазахстанРегионыИСтолицы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаВыбораИзКлассификатора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтавкиНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыписыватьСчетаФактурыПоРезультатамРозничныхПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РазделятьТоварыПоИсточникамПроисхождения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МаксимальноеКоличествоРазличныхВидовЗапасовВОтчетеОРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОтключенныйФункционал</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.EnterpriseData_1_3_8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.УправлениеПредприятиемДляКазахстана</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.КомплекснаяАвтоматизацияДляКазахстана</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьЧека</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыВыпискиАктовВыполненныхРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыКорректировкиРаспределенияНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.УказыватьИИНПриРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УказыватьИИНПриРозничныхПродажах</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

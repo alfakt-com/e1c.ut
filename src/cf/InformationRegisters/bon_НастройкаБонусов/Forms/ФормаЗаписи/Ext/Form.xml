@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="73">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<CheckBoxField name="Активен" id="22">
+					<DataPath>Запись.Активен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АктивенКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="АктивенРасширеннаяПодсказка" id="24"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыдаватьВКредит" id="31">
+					<DataPath>Запись.ВыдаватьВКредит</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыдаватьВКредитКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВыдаватьВКредитРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<InputField name="Приоритет" id="25">
+					<DataPath>Запись.Приоритет</DataPath>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="75">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<InputField name="ДатаНач" id="4">
+					<DataPath>Запись.ДатаНач</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата нач</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаНачКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаНачРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ДатаКон" id="7">
+					<DataPath>Запись.ДатаКон</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата кон</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаКонКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаКонРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Подразделение" id="1">
+			<DataPath>Запись.Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ХарактеристикаБонусов" id="10">
+			<DataPath>Запись.ХарактеристикаБонусов</DataPath>
+			<ContextMenu name="ХарактеристикаБонусовКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ХарактеристикаБонусовРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ВидНастройки" id="19">
+			<DataPath>Запись.ВидНастройки</DataPath>
+			<ContextMenu name="ВидНастройкиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВидНастройкиРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<UsualGroup name="НастЗаНАл" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка за наличку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наст за н ал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="НастЗаНАлРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="81">
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкаЗаНаличку" id="37">
+							<DataPath>Запись.НастройкаЗаНаличку</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Активировать</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкаЗаНаличкуКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="НастройкаЗаНаличкуРасширеннаяПодсказка" id="39"/>
+						</CheckBoxField>
+						<InputField name="ПроцентБонусов" id="28">
+							<DataPath>Запись.ПроцентБонусов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Процент бонусов</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПроцентБонусовКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПроцентБонусовРасширеннаяПодсказка" id="30"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включить ограничение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="80"/>
+					<ChildItems>
+						<CheckBoxField name="ОгранПоНомЗаНал" id="46">
+							<DataPath>Запись.ОгранПоНомЗаНал</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Номенклотуре</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоНомЗаНалКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ОгранПоНомЗаНалРасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОгранПоНомГруппЗаНал" id="49">
+							<DataPath>Запись.ОгранПоНомГруппЗаНал</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Ном. Группе</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоНомГруппЗаНалКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ОгранПоНомГруппЗаНалРасширеннаяПодсказка" id="51"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОгранПоЦенГрупЗаНал" id="52">
+							<DataPath>Запись.ОгранПоЦенГрупЗаНал</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Цен. Группе</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоЦенГрупЗаНалКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ОгранПоЦенГрупЗаНалРасширеннаяПодсказка" id="54"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НастрВКред" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка в Кредит</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настр в кред</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="НастрВКредРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="85">
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкаВКредит" id="34">
+							<DataPath>Запись.НастройкаВКредит</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Активировать</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкаВКредитКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НастройкаВКредитРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<InputField name="ПроцентБонусовВКредит" id="40">
+							<DataPath>Запись.ПроцентБонусовВКредит</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Процент бонусов в кредит</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПроцентБонусовВКредитКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ПроцентБонусовВКредитРасширеннаяПодсказка" id="42"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа6" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На определенную программу</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<CheckBoxField name="НаКонкретнуюПРограммуКред" id="43">
+							<DataPath>Запись.НаКонкретнуюПРограммуКред</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Активировать</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НаКонкретнуюПРограммуКредКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="НаКонкретнуюПРограммуКредРасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+						<InputField name="КредитнаяПрограмма" id="13">
+							<DataPath>Запись.КредитнаяПрограмма</DataPath>
+							<ContextMenu name="КредитнаяПрограммаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="КредитнаяПрограммаРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа7" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включить ограничение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<CheckBoxField name="ОгранПоНомВКред" id="55">
+							<DataPath>Запись.ОгранПоНомВКред</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Номенклотуре</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоНомВКредКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ОгранПоНомВКредРасширеннаяПодсказка" id="57"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОгранПоНомГруппВКред" id="58">
+							<DataPath>Запись.ОгранПоНомГруппВКред</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Ном. Группе</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоНомГруппВКредКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ОгранПоНомГруппВКредРасширеннаяПодсказка" id="60"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОгранПоЦенГрупВКред" id="61">
+							<DataPath>Запись.ОгранПоЦенГрупВКред</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По Цен. Группе</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОгранПоЦенГрупВКредКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ОгранПоЦенГрупВКредРасширеннаяПодсказка" id="63"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа8" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма докуменнта</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<InputField name="Каскад_СуммаС" id="64">
+					<DataPath>Запись.Каскад_СуммаС</DataPath>
+					<ContextMenu name="Каскад_СуммаСКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="Каскад_СуммаСРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="Каскад_СуммаДо" id="67">
+					<DataPath>Запись.Каскад_СуммаДо</DataPath>
+					<ContextMenu name="Каскад_СуммаДоКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="Каскад_СуммаДоРасширеннаяПодсказка" id="69"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДокументЗап" id="16">
+			<DataPath>Запись.ДокументЗап</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ Записи</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДокументЗапКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДокументЗапРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Пользователь" id="70">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="72"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.bon_НастройкаБонусов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

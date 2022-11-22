@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="2da70b52-3467-455f-ba90-a562bbebd4ff">
+		<Properties>
+			<Name>swПартииТоваровОрганизаций</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партии товаров организаций (альтернативный учет)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.swДвиженияТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.swОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.swПодпискиНаСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.swПередЗаписьюТоварногоДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.swОбработкаПроведенияТоварногоДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.swОбработкаУдаленияПроведенияТоварногоДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.swПартииТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Sequence.swПартииТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.swСтатусыПартийТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">67d51de4-8de2-45cd-a819-b17a2cdb513b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">dd7f5256-98e6-4e1b-9068-106052c9e728</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b7f46df9-2704-42d1-9a3c-b398672d0353</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">fd54a400-0d36-11e6-ec9a-7c7a916692a2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5da7686a-bb8c-4ac4-a2b4-838bcde3b4c2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1ae03b45-83b1-4308-88d6-5da5720d8dda</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">5257a74c-9e4b-475b-87d3-21e4ecadd130</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.swСвязьПартийИДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.swЖурналПротоколовОбработок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.swПартииТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.swДвижениеПартийТоваровОрганизацийПоВидамОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.swПродажиПартийТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b5c49dd3-ae38-437b-9f61-951081c21217</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ce26f7e9-8638-400d-911a-6d16a79ace60</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6b8cab9c-161d-463b-baf7-03b3f58a1ab7</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

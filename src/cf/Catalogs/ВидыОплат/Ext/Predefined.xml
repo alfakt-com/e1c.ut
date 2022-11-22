@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.9">
+	<Item id="fa2221b2-6f26-4ef1-b872-4c4d17611b81">
+		<Name>QR</Name>
+		<Code>000000003</Code>
+		<Description>QR</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="150f5922-6752-496d-859e-edbaaa476faf">
+		<Name>Карта</Name>
+		<Code>000000002</Code>
+		<Description>Карта</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b8835f4b-7049-4dda-8ddc-18eb733933b0">
+		<Name>Кредит</Name>
+		<Code>000000005</Code>
+		<Description>Кредит</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8dc5e432-98a6-404e-853d-fc64f41dcf92">
+		<Name>Наличные</Name>
+		<Code>000000001</Code>
+		<Description>Наличные</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8d5115c0-31e6-46fc-98e1-e74b3baf27dd">
+		<Name>Рассрочка</Name>
+		<Code>000000004</Code>
+		<Description>Рассрочка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

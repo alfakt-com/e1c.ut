@@ -1,0 +1,80 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTable">
+
+	<column>
+		<Name xsi:type="xs:string">КодСубъектаРФ</Name>
+		<ValueType>
+			<Type>xs:decimal</Type>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">Наименование</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>120</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">Сокращение</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>10</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">ПочтовыйИндекс</Name>
+		<ValueType>
+			<Type>xs:decimal</Type>
+		</ValueType>
+	</column>
+	
+	<column>
+	<Name xsi:type="xs:string">ДиапазонПочтовыхИндексов</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>120</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+	
+	<column>
+		<Name xsi:type="xs:string">Идентификатор</Name>
+		<ValueType>
+			<Type>UUID</Type>
+		</ValueType>
+	</column>
+
+	<index><column>КодСубъектаРФ</column></index>
+	<index><column>Наименование</column></index>
+	<index><column>Наименование</column><column>Сокращение</column></index>
+	<index><column>Идентификатор</column></index>
+
+	<row><Value>11</Value><Value>Акмолинская</Value>              <Value>область</Value>   <Value>020000</Value><Value>020-029</Value><Value>d8327a56-80de-4df2-815c-4f6ab1224c50</Value></row>
+	<row><Value>15</Value><Value>Актюбинская</Value>              <Value>область</Value>   <Value>030000</Value><Value>030-039</Value><Value>6f2cbfd8-692a-4ee4-9b16-067210bde3fc</Value></row>
+	<row><Value>19</Value><Value>Алматинская</Value>              <Value>область</Value>   <Value>040000</Value><Value>040-049</Value><Value>a84ebed3-153d-4ba9-8532-8bdf879e1f5a</Value></row>
+	<row><Value>23</Value><Value>Атырауская</Value>               <Value>область</Value>   <Value>060000</Value><Value>060-069</Value><Value>5c48611f-5de6-4771-9695-7e36a4e7529d</Value></row>
+	<row><Value>27</Value><Value>Западно-Казахстанская</Value>    <Value>область</Value>   <Value>090000</Value><Value>090-099</Value><Value>0bb7fa19-736d-49cf-ad0e-9774c4dae09b</Value></row>
+	<row><Value>31</Value><Value>Жамбылская</Value>               <Value>область</Value>   <Value>080000</Value><Value>080-089</Value><Value>b2d8cd20-cabc-4deb-afad-f3c4b4d55821</Value></row>
+	<row><Value>35</Value><Value>Карагандинская</Value>           <Value>область</Value>   <Value>100000</Value><Value>100-109</Value><Value>1781f74e-be4a-4697-9c6b-493057c94818</Value></row>
+	<row><Value>39</Value><Value>Костанайская</Value>             <Value>область</Value>   <Value>110000</Value><Value>110-119</Value><Value>491cde9d-9d76-4591-ab46-ea93c079e686</Value></row>
+	<row><Value>43</Value><Value>Кызылординская</Value>           <Value>область</Value>   <Value>120000</Value><Value>120-129</Value><Value>61b95807-388a-4cb1-9bee-889f7cf811c8</Value></row>
+	<row><Value>47</Value><Value>Мангистауская</Value>            <Value>область</Value>   <Value>130000</Value><Value>130-139</Value><Value>248d8071-06e1-425e-a1cf-d1ff4c4a14a8</Value></row>
+	<row><Value>55</Value><Value>Павлодарская</Value>             <Value>область</Value>   <Value>140000</Value><Value>140-149</Value><Value>de2cbfdf-9662-44a4-a4a4-8ad237ae4a3e</Value></row>
+	<row><Value>59</Value><Value>Северо-Казахстанская</Value>     <Value>область</Value>   <Value>150000</Value><Value>150-159</Value><Value>37a0c60a-9240-48b5-a87f-0d8c86cdb6e1</Value></row>
+	<row><Value>61</Value><Value>Туркестанская</Value>            <Value>область</Value>   <Value>160000</Value><Value>160-169</Value><Value>026bc56f-3731-48e9-8245-655331f596c0</Value></row>
+	<row><Value>63</Value><Value>Восточно-Казахстанская</Value>   <Value>область</Value>   <Value>070000</Value><Value>070-079</Value><Value>c225d3db-1db6-4063-ace0-b3fe9ea3805f</Value></row>
+	<row><Value>71</Value><Value>Нур-Султан</Value>               <Value>г</Value>        <Value>010000</Value><Value>010-019</Value><Value>de459e9c-2933-4923-83d1-9c64cfd7a817</Value></row>
+	<row><Value>75</Value><Value>Алматы</Value>                   <Value>г</Value>        <Value>050000</Value><Value>050-059</Value><Value>0c089b04-099e-4e0e-955a-6bf1ce525f1a</Value></row>
+	<row><Value>79</Value><Value>Шымкент</Value>                  <Value>г</Value>        <Value>160000</Value><Value>160-169</Value><Value>52618b9c-bcbb-47e7-8957-95c63f0b17cc</Value></row>
+
+</ValueTable>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="0:10276f91-9466-4e0c-bac3-c48b1b9fbb85">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ДобавитьНаНачальнуюСтраницу">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="0:3516b3cb-bc84-4802-826b-17d422b8a10f">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ИсторияСинхронизаций">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ТаблицаИзменений">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ВыполнитьСинхронизациюИзменений">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ВыполнитьПолнуюСинхронизацию">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Б24_НастройкаОбменаСПорталом.Command.ЗапуститьРежимРеальногоВремениДляПортала">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="0:10276f91-9466-4e0c-bac3-c48b1b9fbb85">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>00000000-0000-0000-0000-000000000000</Group>
+	</GroupsOrder>
+</CommandInterface>

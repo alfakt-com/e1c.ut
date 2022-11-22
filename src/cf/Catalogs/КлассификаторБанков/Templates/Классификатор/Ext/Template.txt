@@ -1,0 +1,180 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTable">
+	
+	<column>
+		<Name xsi:type="xs:string">Код</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>9</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+
+	<column>
+		<Name xsi:type="xs:string">Наименование</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<StringQualifiers>
+				<Length>100</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+	</column>
+
+	<index>
+		<column>Код</column>
+	</index>
+	<index>
+		<column>Наименование</column>
+	</index>
+	
+	<row>
+		<Value>ALFAKZKA</Value>
+		<Value>АО "Дочерний Банк "АЛЬФА-БАНК"</Value>
+	</row>
+	<row>
+		<Value>ALMNKZKA</Value>
+		<Value>АО "АТФБанк" (ДБ АО "First Heartland Jusan Bank")</Value>
+	</row>
+	<row>
+		<Value>ATYNKZKA</Value>
+		<Value>АО "Altyn Bank" (ДБ China Citic Bank Corporation Limited)</Value>
+	</row>
+	<row>
+		<Value>BKCHKZKA</Value>
+		<Value>АО ДБ "БАНК КИТАЯ В КАЗАХСТАНЕ"</Value>
+	</row>
+	<row>
+		<Value>CASPKZKA</Value>
+		<Value>АО "KASPI BANK"</Value>
+	</row>
+	<row>
+		<Value>CEDUKZKA</Value>
+		<Value>АО "Центральный Депозитарий Ценных Бумаг"</Value>
+	</row>
+	<row>
+		<Value>CITIKZKA</Value>
+		<Value>АО "Ситибанк Казахстан"</Value>
+	</row>
+	<row>
+		<Value>DVKAKZKA</Value>
+		<Value>АО "Банк Развития Казахстана"</Value>
+	</row>
+	<row>
+		<Value>EABRKZKA</Value>
+		<Value>ЕВРАЗИЙСКИЙ БАНК РАЗВИТИЯ</Value>
+	</row>
+	<row>
+		<Value>EURIKZKA</Value>
+		<Value>АО "Евразийский Банк"</Value>
+	</row>
+	<row>
+		<Value>GCVPKZ2A</Value>
+		<Value>НАО "Государственная корпорация "Правительство для граждан"</Value>
+	</row>
+	<row>
+		<Value>HCSKKZKA</Value>
+		<Value>АО "Жилищный строительный сберегательный банк "Отбасы банк"</Value>
+	</row>
+	<row>
+		<Value>HLALKZKZ</Value>
+		<Value>АО "Исламский Банк "Al Hilal"</Value>
+	</row>
+	<row>
+		<Value>HSBKKZKX</Value>
+		<Value>АО "Народный Банк Казахстана"</Value>
+	</row>
+	<row>
+		<Value>ICBKKZKX</Value>
+		<Value>АО "Торгово-промышленный Банк Китая в г. Алматы"</Value>
+	</row>
+	<row>
+		<Value>INEARUMM</Value>
+		<Value>г.Москва Межгосударственный Банк</Value>
+	</row>
+	<row>
+		<Value>INLMKZKA</Value>
+		<Value>ДБ АО "Хоум Кредит энд Финанс Банк"</Value>
+	</row>
+	<row>
+		<Value>IRTYKZKA</Value>
+		<Value>АО "ForteBank"</Value>
+	</row>
+	<row>
+		<Value>KCJBKZKX</Value>
+		<Value>АО "Банк ЦентрКредит"</Value>
+	</row>
+	<row>
+		<Value>KICEKZKX</Value>
+		<Value>АО "Казахстанская фондовая биржа"</Value>
+	</row>
+	<row>
+		<Value>KINCKZKA</Value>
+		<Value>АО "Банк "Bank RBK"</Value>
+	</row>
+	<row>
+		<Value>KISCKZKX</Value>
+		<Value>РГП "Казахстанский центр межбанковских расчетов НБРК"</Value>
+	</row>
+	<row>
+		<Value>KKMFKZ2A</Value>
+		<Value>РГУ "Комитет казначейства Министерства финансов РК"</Value>
+	</row>
+	<row>
+		<Value>KPSTKZKA</Value>
+		<Value>АО "КАЗПОЧТА"</Value>
+	</row>
+	<row>
+		<Value>KSNVKZKA</Value>
+		<Value>АО "Банк Фридом Финанс Казахстан"</Value>
+	</row>
+	<row>
+		<Value>KZIBKZKA</Value>
+		<Value>АО "ДБ "КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК"</Value>
+	</row>
+	<row>
+		<Value>LARIKZKA</Value>
+		<Value>АО "AsiaCredit Bank (АзияКредит Банк)"</Value>
+	</row>
+	<row>
+		<Value>NBPAKZKA</Value>
+		<Value>АО ДБ "Национальный Банк Пакистана" в Казахстане</Value>
+	</row>
+	<row>
+		<Value>NBPFKZKX</Value>
+		<Value>"Банк-кастодиан АО  "ЕНПФ"</Value>
+	</row>
+	<row>
+		<Value>NBRKKZKX</Value>
+		<Value>РГУ Национальный Банк Республики Казахстан</Value>
+	</row>
+	<row>
+		<Value>NURSKZKX</Value>
+		<Value>АО "Нурбанк"</Value>
+	</row>
+	<row>
+		<Value>SABRKZKA</Value>
+		<Value>ДБ АО "Сбербанк"</Value>
+	</row>
+	<row>
+		<Value>SHBKKZKA</Value>
+		<Value>АО "Шинхан Банк Казахстан"</Value>
+	</row>
+	<row>
+		<Value>TBKBKZKA</Value>
+		<Value>АО "Capital Bank Kazakhstan"</Value>
+	</row>
+	<row>
+		<Value>TSESKZKA</Value>
+		<Value>АО "First Heartland Jusan Bank"</Value>
+	</row>
+	<row>
+		<Value>VTBAKZKZ</Value>
+		<Value>ДО АО Банк ВТБ (Казахстан)</Value>
+	</row>
+	<row>
+		<Value>ZAJSKZ22</Value>
+		<Value>АО "Исламский банк "Заман-Банк"</Value>
+	</row>	
+</ValueTable>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройки" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<InputField name="Год" id="7">
+					<DataPath>Объект.Год</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ГодКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<CheckBoxField name="ПлановыеПоказатели" id="41">
+					<DataPath>Объект.ПлановыеПоказатели</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановые</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПлановыеПоказателиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПлановыеПоказателиРасширеннаяПодсказка" id="43"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЗначениеПоказателей" id="10">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<DataPath>Объект.ЗначениеПоказателей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗначениеПоказателейКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ЗначениеПоказателейКоманднаяПанель" id="12">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗначениеПоказателейРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ЗначениеПоказателейСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ЗначениеПоказателей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначениеПоказателейСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЗначениеПоказателейСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗначениеПоказателейСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ЗначениеПоказателей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначениеПоказателейСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЗначениеПоказателейСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗначениеПоказателейУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ЗначениеПоказателей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗначениеПоказателейУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ЗначениеПоказателейУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЗначениеПоказателейНомерСтроки" id="23">
+					<DataPath>Объект.ЗначениеПоказателей.LineNumber</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЗначениеПоказателейНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ЗначениеПоказателейПериод" id="26">
+					<DataPath>Объект.ЗначениеПоказателей.Период</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейПериодКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗначениеПоказателейПериодРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ЗначениеПоказателейМесяц" id="29">
+					<DataPath>Объект.ЗначениеПоказателей.Месяц</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейМесяцКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗначениеПоказателейМесяцРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ЗначениеПоказателейЗначение" id="32">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейЗначениеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗначениеПоказателейЗначениеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ЗначениеПоказателейЗначениеПлан" id="35">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейЗначениеПланКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ЗначениеПоказателейЗначениеПланРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ЗначениеПоказателейЗначениеФакт" id="38">
+					<DataPath>Объект.ЗначениеПоказателей.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеПоказателейЗначениеФактКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗначениеПоказателейЗначениеФактРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="46">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.кт_ЗначенияПоказателейВыручки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

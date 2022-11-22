@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<FunctionalOption uuid="01d8050a-6d7c-461c-8220-17a0a38a3373">
+		<Properties>
+			<Name>УправлениеПредприятиемДляКазахстана</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление предприятием для Казахстана</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.УправлениеПредприятием</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Catalog.УчетныеПолитикиОрганизаций.Attribute.УдалитьПрименяетсяОППВ</xr:Object>
+				<xr:Object>Catalog.УчетныеПолитикиОрганизаций.Attribute.СписыватьСтоимостныйБалансПриВыбытииВсехФАГруппы</xr:Object>
+				<xr:Object>Catalog.УчетныеПолитикиОрганизаций.Attribute.РассчитыватьДоходОтПревышенияСтоимостиВыбывшихФА</xr:Object>
+				<xr:Object>Catalog.УчетныеПолитикиОрганизаций.Attribute.СписыватьСтоимостныйБалансГруппыМенееМинимума</xr:Object>
+				<xr:Object>Catalog.УчетныеПолитикиОрганизаций.Attribute.АмортизацияФАНУ</xr:Object>
+				<xr:Object>Document.АктВыполненныхРабот.TabularSection.Услуги.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПокупок.TabularSection.Ценности.Attribute.ВидОперацииПоступления</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПокупок.TabularSection.Ценности.Attribute.ВидОборота</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПокупок.TabularSection.Ценности.Attribute.УплаченныйНДС</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПродаж.TabularSection.Ценности.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПродаж.TabularSection.Ценности.Attribute.ОборотПоРеализации</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПродаж.TabularSection.Расхождения.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.ЗаписьКнигиПродаж.TabularSection.Расхождения.Attribute.ОборотПоРеализации</xr:Object>
+				<xr:Object>Document.ЗаявкаНаРасходованиеДенежныхСредств.TabularSection.УдалитьВедомостиНаПеречислениеВзносовИОтчислений</xr:Object>
+				<xr:Object>Document.ЗаявлениеОВвозеТоваров.TabularSection.Товары.Attribute.ВидОперацииПоступления</xr:Object>
+				<xr:Object>Document.КорректировкаПриобретения.TabularSection.Расхождения.Attribute.ВидОперацииПоступления</xr:Object>
+				<xr:Object>Document.КорректировкаРеализации.TabularSection.Товары.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.КорректировкаРеализации.TabularSection.Расхождения.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.ПередачаТоваровМеждуОрганизациями.TabularSection.Товары.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.ПоступлениеБезналичныхДенежныхСредств.TabularSection.УдалитьВедомостиНезачисленныхВзносовОтчислений</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.Attribute.СуммаНДСРазрешенногоКЗачету</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.Attribute.СуммаНДСНеРазрешенногоКЗачету</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.Attribute.СуммаНДСНачисленного</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.Attribute.СуммаНДСМетодомЗачета</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.Attribute.СуммаНДСПереносимыйЗачет</xr:Object>
+				<xr:Object>Document.РаспределениеНДС.TabularSection.НДСОбособленныхПодразделений</xr:Object>
+				<xr:Object>Document.РеализацияТоваровУслуг.TabularSection.Товары.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.РеализацияУслугПрочихАктивов.TabularSection.Доходы.Attribute.ВидОперацииРеализации</xr:Object>
+				<xr:Object>Document.СписаниеБезналичныхДенежныхСредств.TabularSection.УдалитьВедомостиНаПеречислениеВзносовИОтчислений</xr:Object>
+				<xr:Object>Document.ТаможеннаяДекларацияИмпорт.TabularSection.Товары.Attribute.ВидОперацииПоступления</xr:Object>
+				<xr:Object>ChartOfCharacteristicTypes.СтатьиРасходов.Attribute.РасходыПоКапРемонтуИПреференциям</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

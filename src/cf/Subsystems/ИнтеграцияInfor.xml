@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="962a4aad-0f9d-4f53-ad13-3e217d654871">
+		<Properties>
+			<Name>ИнтеграцияInfor</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция infor</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>StdPicture.SettingsStorage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_ОбработкаОбъектовВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_ОписаниеТаблицЗагрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_СвязкиСкладов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Infor_ТипыПолей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Infor_СтатусВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Infor_СтатусыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Infor_Интеграция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.infor_ПриЗаписиОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_ОчередьВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_Ошибки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_ЛогЗагрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_СтатусыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.infor_СтрокаПодключения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.Infor_Интграция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Infor_СтрокаПодключения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.Infor_Интеграция</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Infor_ВыгрузитьВВМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Infor_Информация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Infor_ПоказатьИнформацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_ИсторияСтатусовОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.infor_Организация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_СвязкиКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.infor_Автор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_ОбщиеФункции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_ПрефиксыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Infor_ВыгрузкаОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Infor_ОбщиеНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_Остатки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_ИсторияСтатусовВМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Infor_Резервы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">1f9c1f55-9711-40ff-9d1c-3716f91d723f</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">24a6265b-5c19-485e-99ad-457cfc2ae982</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">78615d07-fd45-44a9-8384-abd937a0a96e</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Infor_СтатусыВМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Infor_СтатусыВМС</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

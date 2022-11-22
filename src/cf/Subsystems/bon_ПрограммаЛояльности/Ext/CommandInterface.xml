@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="0:a50cb50b-6353-45ff-ae03-33eee1e308a3">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.bon_Отчеты_по_Бонусам">true</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.Отчеты</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.Документы</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.Обработки</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.Перечисления</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.РегистрНакопления</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.РегистрСведений</Subsystem>
+		<Subsystem>Subsystem.bon_ПрограммаЛояльности.Subsystem.Справочники</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

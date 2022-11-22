@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройкаОбменаПоРасписанию" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка синхронизаций по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройка обмена по расписанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаНастройкаОбменаПоРасписаниюРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="ПодгруппаРасписания" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подгруппа расписания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подгруппа расписания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПодгруппаРасписанияРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<CheckBoxField name="РасписаниеИспользуется" id="35">
+							<DataPath>РасписаниеИспользуется</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Активировать</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РасписаниеИспользуетсяКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="РасписаниеИспользуетсяРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">РасписаниеИспользуетсяПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="НастроитьРасписаниеОбмена" id="28">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастроитьРасписаниеОбмена</CommandName>
+							<ExtendedTooltip name="НастроитьРасписаниеОбменаРасширеннаяПодсказка" id="29"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ОписаниеНастройкиРасписания" id="30">
+					<Width>47</Width>
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка частоты проверки на синхронизацию данных по расписанию</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеНастройкиРасписанияКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ОписаниеНастройкиРасписанияРасширеннаяПодсказка" id="32"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛогирование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки хранения истории синхронизаций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа логирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаЛогированиеРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛогированиеОбщее" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логирование общее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логирование общее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛогированиеОбщееРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<CheckBoxField name="УдалятьЛог" id="7">
+							<DataPath>ОбрезатьИсториюОбменов</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УдалятьЛогКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="УдалятьЛогРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">СохранениеИнформацииОЛогированииКлиент</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ЧислоДнейХраненияИстории" id="10">
+							<DataPath>ЧислоДнейХраненияИстории</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЧислоДнейХраненияИсторииКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЧислоДнейХраненияИсторииРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">СохранениеИнформацииОЛогированииКлиент</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРежимОтладки" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим отладки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим отладки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРежимОтладкиРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<CheckBoxField name="РежимОтладки" id="15">
+							<DataPath>РежимОтладки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="17"/>
+							<Events>
+								<Event name="OnChange">СохранениеИнформацииОЛогированииКлиент</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ДекорацияРежимОтладки" id="18">
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если включен режим, то запросы синхронизации будут храниться в истории синхронизации</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияРежимОтладкиКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ДекорацияРежимОтладкиРасширеннаяПодсказка" id="20"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВыгрузкаПечатныхФорм" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка печатных форм документов в Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаВыгрузкаПечатныхФормРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<CheckBoxField name="ВыгрузкаПечетныхФормВБитрикс24" id="40">
+					<DataPath>ВыгрузкаПечатныхФормВБитрикс24</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгрузкаПечетныхФормВБитрикс24КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ВыгрузкаПечетныхФормВБитрикс24РасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">ВыгрузкаПечетныхФормВБитрикс24ПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗагрузкаВРежимеРеальногоВремени" id="24">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки режима реального времени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка в режиме реального времени</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаЗагрузкаВРежимеРеальногоВремениРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремени" id="21">
+					<DataPath>НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремени</DataPath>
+					<ChoiceParameters>
+						<app:item name="Отбор.СпособСинхронизацииДанных">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">ВРежимеРеальногоВремени</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремениКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремениРасширеннаяПодсказка" id="23"/>
+					<Events>
+						<Event name="OnChange">НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремениПриИзмененииКлиент</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ВестиРеестрПечатныхФорм" id="48">
+			<DataPath>ВестиРеестрПечатныхФорм</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиРеестрПечатныхФормКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="ВестиРеестрПечатныхФормРасширеннаяПодсказка" id="50"/>
+			<Events>
+				<Event name="OnChange">ВестиРеестрПечатныхФормПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаЗаказы" id="46">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заказы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаЗаказыРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="ТипДокументаЗаказа" id="43">
+					<DataPath>ТипДокументаЗаказа</DataPath>
+					<Width>17</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Заказ</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Сделка</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипДокументаЗаказаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТипДокументаЗаказаРасширеннаяПодсказка" id="45"/>
+					<Events>
+						<Event name="OnChange">ТипДокументаЗаказаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="РежимОтладки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отладки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоДнейХраненияИстории" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней хранения истории синхронизаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбрезатьИсториюОбменов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обрезать историю синхронизаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСинхронизацииДляЗагрузкиВРежимеРеальногоВремени" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка синхронизации для загрузки в режиме реального
+				времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Б24_НастройкиСинхронизацииСБитрикс24</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗадания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РасписаниеИспользуется" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание используется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгрузкаПечатныхФормВБитрикс24" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка печатных форм документов в Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипДокументаЗаказа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Офлайн заказ выгружается в Битрикс24 как</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВестиРеестрПечатныхФорм" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести реестр печатных форм документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьРасписаниеОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьРасписаниеОбмена</Action>
+		</Command>
+	</Commands>
+</Form>

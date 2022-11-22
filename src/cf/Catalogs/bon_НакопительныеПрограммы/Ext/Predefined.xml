@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.9">
+	<Item id="90484d1f-f101-4204-879f-3d6300f18bd4">
+		<Name>Базовая</Name>
+		<Code>001</Code>
+		<Description>Базовая</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fdeffa65-9051-4f94-9d77-799ce9fd17a4">
+		<Name>ИнтернетМагазин</Name>
+		<Code>002</Code>
+		<Description>Интернет-магазин</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

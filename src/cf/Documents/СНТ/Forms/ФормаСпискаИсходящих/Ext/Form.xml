@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Электронные сопроводительные накладные на товары (выданные)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="Организация" id="39">
+					<DataPath>Организация</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<Width>27</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Контрагент" id="42">
+					<DataPath>Контрагент</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<Width>27</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="44"/>
+					<Events>
+						<Event name="OnChange">КонтрагентПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Состояние" id="45">
+					<DataPath>Состояние</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<Width>27</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="47"/>
+					<Events>
+						<Event name="OnChange">СостояниеПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="48">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="50">
+				<ChildItems>
+					<Button name="СписокДокументСНТПодтвердить" id="125">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Подтвердить</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТПодтвердитьРасширеннаяПодсказка" id="126"/>
+					</Button>
+					<Button name="СписокДокументСНТОтозвать" id="102">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Отозвать</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТОтозватьРасширеннаяПодсказка" id="103"/>
+					</Button>
+					<Button name="СписокДокументСНТСоздатьПервичныйДокумент" id="118">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.СоздатьПервичныйДокумент</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТСоздатьПервичныйДокументРасширеннаяПодсказка" id="119"/>
+					</Button>
+					<Button name="СписокДокументСНТВыгрузить" id="104">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Выгрузить</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТВыгрузитьРасширеннаяПодсказка" id="105"/>
+					</Button>
+					<Button name="СписокЗагрузитьИзXML" id="130">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.СНТ.Command.Импортировать</CommandName>
+						<ExtendedTooltip name="СписокЗагрузитьИзXMLРасширеннаяПодсказка" id="131"/>
+					</Button>
+					<Button name="СписокДокументСНТОбновить" id="106">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Обновить</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТОбновитьРасширеннаяПодсказка" id="107"/>
+					</Button>
+					<Button name="СписокДокументСНТОтправить" id="108">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Отправить</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТОтправитьРасширеннаяПодсказка" id="109"/>
+					</Button>
+					<Button name="ФормаДокументСНТПолучитьИдентификаторыТоваров" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.ПолучитьИдентификаторыТоваров</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаДокументСНТПолучитьИдентификаторыТоваровРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="СписокДокументСНТПроверить" id="110">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.Проверить</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТПроверитьРасширеннаяПодсказка" id="111"/>
+					</Button>
+					<Button name="СписокДокументСНТПерезаполнитьПоПервичномуДокументу" id="123">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.СНТ.Command.ПерезаполнитьПоПервичномуДокументу</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<ExtendedTooltip name="СписокДокументСНТПерезаполнитьПоПервичномуДокументуРасширеннаяПодсказка" id="124"/>
+					</Button>
+					<Popup name="СписокГруппаЭСФиСФ" id="114">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЭСФ и СФ</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список группа ЭСФи СФ</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="СписокГруппаЭСФиСФРасширеннаяПодсказка" id="115"/>
+						<ChildItems>
+							<Button name="СписокОбработкаОбменСНТСоздатьЭСФИСФ" id="112">
+								<Type>CommandBarButton</Type>
+								<CommandName>DataProcessor.ОбменСНТ.Command.СоздатьЭСФИСФ</CommandName>
+								<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+								<ExtendedTooltip name="СписокОбработкаОбменСНТСоздатьЭСФИСФРасширеннаяПодсказка" id="113"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="СписокИзменитьФорму" id="116">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="117"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокДата" id="61">
+					<DataPath>Список.Дата</DataPath>
+					<ContextMenu name="СписокДатаКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="СписокДатаРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="СписокНомер" id="64">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="СписокНомерКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СписокНомерРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="НомерСНТ" id="127">
+					<DataPath>Список.НомерСНТ</DataPath>
+					<ContextMenu name="НомерСНТКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="НомерСНТРасширеннаяПодсказка" id="129"/>
+				</LabelField>
+				<LabelField name="СписокСостояние" id="67">
+					<DataPath>Список.Состояние</DataPath>
+					<ContextMenu name="СписокСостояниеКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="СписокСостояниеРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="ЭСФ" id="132">
+					<DataPath>Список.ЭСФ</DataPath>
+					<ContextMenu name="ЭСФКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ЭСФРасширеннаяПодсказка" id="134"/>
+				</LabelField>
+				<LabelField name="СписокДатаОтгрузкиТовара" id="76">
+					<DataPath>Список.ДатаОтгрузкиТовара</DataPath>
+					<ContextMenu name="СписокДатаОтгрузкиТовараКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СписокДатаОтгрузкиТовараРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<LabelField name="СписокТипСНТ" id="82">
+					<DataPath>Список.ТипСНТ</DataPath>
+					<ContextMenu name="СписокТипСНТКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СписокТипСНТРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<InputField name="СписокВидОперации" id="120">
+					<DataPath>Список.ВидОперации</DataPath>
+					<ContextMenu name="СписокВидОперацииКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="СписокВидОперацииРасширеннаяПодсказка" id="122"/>
+				</InputField>
+				<LabelField name="СписокКонтрагент" id="70">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="СписокКонтрагентКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="СписокКонтрагентРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<LabelField name="СписокСуммаДокумента" id="73">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<ContextMenu name="СписокСуммаДокументаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СписокСуммаДокументаРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="СписокОрганизация" id="79">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="СписокОрганизацияКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="СписокОрганизацияРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="СписокРегистрационныйНомерИСЭСФ" id="88">
+					<DataPath>Список.РегистрационныйНомерИСЭСФ</DataPath>
+					<ContextMenu name="СписокРегистрационныйНомерИСЭСФКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="СписокРегистрационныйНомерИСЭСФРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="СписокРегистрационныйНомерИСМПТ" id="85">
+					<DataPath>Список.РегистрационныйНомерИСМПТ</DataPath>
+					<ContextMenu name="СписокРегистрационныйНомерИСМПТКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="СписокРегистрационныйНомерИСМПТРасширеннаяПодсказка" id="87"/>
+				</LabelField>
+				<LabelField name="СписокСсылка" id="91">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументСНТ.Ссылка КАК Ссылка,
+	ДокументСНТ.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументСНТ.Номер КАК Номер,
+	ДокументСНТ.Дата КАК Дата,
+	ДокументСНТ.Проведен КАК Проведен,
+	ДокументСНТ.ТипСНТ КАК ТипСНТ,
+	ДокументСНТ.НомерСНТ КАК НомерСНТ,
+	ДокументСНТ.ДатаОтгрузкиТовара КАК ДатаОтгрузкиТовара,
+	ДокументСНТ.Направление КАК Направление,
+	ДокументСНТ.СвязанныйСНТ КАК СвязанныйСНТ,
+	ДокументСНТ.РегистрационныйНомерСвязанногоСНТ КАК РегистрационныйНомерСвязанногоСНТ,
+	ДокументСНТ.ВидОперации КАК ВидОперации,
+	ДокументСНТ.ВидВвоза КАК ВидВвоза,
+	ДокументСНТ.ВидВывоза КАК ВидВывоза,
+	ДокументСНТ.ВидПеремещения КАК ВидПеремещения,
+	ДокументСНТ.ЕстьЭтиловыйСпирт КАК ЕстьЭтиловыйСпирт,
+	ДокументСНТ.ЕстьВиноматериал КАК ЕстьВиноматериал,
+	ДокументСНТ.ЕстьПивоПивныеНапитки КАК ЕстьПивоПивныеНапитки,
+	ДокументСНТ.ЕстьАлкоголь КАК ЕстьАлкоголь,
+	ДокументСНТ.ЕстьНефтепродукты КАК ЕстьНефтепродукты,
+	ДокументСНТ.ЕстьБиотопливо КАК ЕстьБиотопливо,
+	ДокументСНТ.ЕстьТабачныеИзделия КАК ЕстьТабачныеИзделия,
+	ДокументСНТ.ЕстьДругиеТоварыЦифроваяМаркировка КАК ЕстьДругиеТоварыЦифроваяМаркировка,
+	ДокументСНТ.ЕстьТоварыЭК КАК ЕстьТоварыЭК,
+	ДокументСНТ.Валюта КАК Валюта,
+	ДокументСНТ.ВалютаКод КАК ВалютаКод,
+	ДокументСНТ.КурсВалюты КАК КурсВалюты,
+	ДокументСНТ.РегистрационныйНомерИСЭСФ КАК РегистрационныйНомерИСЭСФ,
+	ДокументСНТ.ДатаРегистрацииИСЭСФ КАК ДатаРегистрацииИСЭСФ,
+	ДокументСНТ.РегистрационныйНомерИСМПТ КАК РегистрационныйНомерИСМПТ,
+	ДокументСНТ.ДатаРегистрацииИСМПТ КАК ДатаРегистрацииИСМПТ,
+	ДокументСНТ.Поставщик КАК Поставщик,
+	ДокументСНТ.ПоставщикИдентификатор КАК ПоставщикИдентификатор,
+	ДокументСНТ.ПоставщикНерезидент КАК ПоставщикНерезидент,
+	ДокументСНТ.ПоставщикНаименование КАК ПоставщикНаименование,
+	ДокументСНТ.ПоставщикБИНСтруктурногоПодразделения КАК ПоставщикБИНСтруктурногоПодразделения,
+	ДокументСНТ.ПоставщикБИНРеорганизованногоЛица КАК ПоставщикБИНРеорганизованногоЛица,
+	ДокументСНТ.ПоставщикКодСтраны КАК ПоставщикКодСтраны,
+	ДокументСНТ.ПоставщикКодСтраныОтправки КАК ПоставщикКодСтраныОтправки,
+	ДокументСНТ.АдресОтправки КАК АдресОтправки,
+	ДокументСНТ.СкладОтправкиИдентификатор КАК СкладОтправкиИдентификатор,
+	ДокументСНТ.СкладОтправитель КАК СкладОтправитель,
+	ДокументСНТ.ПоставщикАдвокат КАК ПоставщикАдвокат,
+	ДокументСНТ.ПоставщикДоверитель КАК ПоставщикДоверитель,
+	ДокументСНТ.ПоставщикЛизингодатель КАК ПоставщикЛизингодатель,
+	ДокументСНТ.ПоставщикЛизингополучатель КАК ПоставщикЛизингополучатель,
+	ДокументСНТ.ПоставщикКомиссионер КАК ПоставщикКомиссионер,
+	ДокументСНТ.ПоставщикКомитент КАК ПоставщикКомитент,
+	ДокументСНТ.ПоставщикМедиатор КАК ПоставщикМедиатор,
+	ДокументСНТ.ПоставщикНотариус КАК ПоставщикНотариус,
+	ДокументСНТ.ПоставщикРозничнаяРеализация КАК ПоставщикРозничнаяРеализация,
+	ДокументСНТ.ПоставщикРозничныйРеализатор КАК ПоставщикРозничныйРеализатор,
+	ДокументСНТ.ПоставщикУчастникСРП КАК ПоставщикУчастникСРП,
+	ДокументСНТ.ПоставщикУчастникСовместнойДеятельности КАК ПоставщикУчастникСовместнойДеятельности,
+	ДокументСНТ.ПоставщикФармацевтическийПроизводитель КАК ПоставщикФармацевтическийПроизводитель,
+	ДокументСНТ.ПоставщикФизическоеЛицо КАК ПоставщикФизическоеЛицо,
+	ДокументСНТ.ПоставщикЧастныйСудебныйИсполнитель КАК ПоставщикЧастныйСудебныйИсполнитель,
+	ДокументСНТ.УдалитьПоставщикДополнительныеСведения КАК УдалитьПоставщикДополнительныеСведения,
+	ДокументСНТ.Получатель КАК Получатель,
+	ДокументСНТ.ПолучательИдентификатор КАК ПолучательИдентификатор,
+	ДокументСНТ.ПолучательНерезидент КАК ПолучательНерезидент,
+	ДокументСНТ.ПолучательНаименование КАК ПолучательНаименование,
+	ДокументСНТ.ПолучательБИНСтруктурногоПодразделения КАК ПолучательБИНСтруктурногоПодразделения,
+	ДокументСНТ.ПолучательБИНРеорганизованногоЛица КАК ПолучательБИНРеорганизованногоЛица,
+	ДокументСНТ.ПолучательКодСтраны КАК ПолучательКодСтраны,
+	ДокументСНТ.ПолучательКодСтраныДоставки КАК ПолучательКодСтраныДоставки,
+	ДокументСНТ.АдресДоставки КАК АдресДоставки,
+	ДокументСНТ.СкладДоставкиИдентификатор КАК СкладДоставкиИдентификатор,
+	ДокументСНТ.СкладПолучатель КАК СкладПолучатель,
+	ДокументСНТ.ПолучательАдвокат КАК ПолучательАдвокат,
+	ДокументСНТ.ПолучательДоверитель КАК ПолучательДоверитель,
+	ДокументСНТ.УдалитьПолучательДополнительныеСведения КАК УдалитьПолучательДополнительныеСведения,
+	ДокументСНТ.ПолучательКомиссионер КАК ПолучательКомиссионер,
+	ДокументСНТ.ПолучательКомитент КАК ПолучательКомитент,
+	ДокументСНТ.ПолучательЛизингодатель КАК ПолучательЛизингодатель,
+	ДокументСНТ.ПолучательЛизингополучатель КАК ПолучательЛизингополучатель,
+	ДокументСНТ.ПолучательМедиатор КАК ПолучательМедиатор,
+	ДокументСНТ.ПолучательНотариус КАК ПолучательНотариус,
+	ДокументСНТ.ПолучательРозничнаяРеализация КАК ПолучательРозничнаяРеализация,
+	ДокументСНТ.ПолучательРозничныйРеализатор КАК ПолучательРозничныйРеализатор,
+	ДокументСНТ.ПолучательУчастникСовместнойДеятельности КАК ПолучательУчастникСовместнойДеятельности,
+	ДокументСНТ.ПолучательУчастникСРП КАК ПолучательУчастникСРП,
+	ДокументСНТ.ПолучательФармацевтическийПроизводитель КАК ПолучательФармацевтическийПроизводитель,
+	ДокументСНТ.ПолучательФизическоеЛицо КАК ПолучательФизическоеЛицо,
+	ДокументСНТ.ПолучательЧастныйСудебныйИсполнитель КАК ПолучательЧастныйСудебныйИсполнитель,
+	ДокументСНТ.Грузоотправитель КАК Грузоотправитель,
+	ДокументСНТ.ГрузоотправительИдентификатор КАК ГрузоотправительИдентификатор,
+	ДокументСНТ.ГрузоотправительНаименование КАК ГрузоотправительНаименование,
+	ДокументСНТ.ГрузоотправительНерезидент КАК ГрузоотправительНерезидент,
+	ДокументСНТ.ГрузоотправительКодСтраныОтправки КАК ГрузоотправительКодСтраныОтправки,
+	ДокументСНТ.ГрузоотправительДополнительныеСведения КАК ГрузоотправительДополнительныеСведения,
+	ДокументСНТ.Грузополучатель КАК Грузополучатель,
+	ДокументСНТ.ГрузополучательИдентификатор КАК ГрузополучательИдентификатор,
+	ДокументСНТ.ГрузополучательНаименование КАК ГрузополучательНаименование,
+	ДокументСНТ.ГрузополучательНерезидент КАК ГрузополучательНерезидент,
+	ДокументСНТ.ГрузополучательКодСтраныОтправки КАК ГрузополучательКодСтраныОтправки,
+	ДокументСНТ.ГрузополучательДополнительныеСведения КАК ГрузополучательДополнительныеСведения,
+	ДокументСНТ.АвтомобильныйТранспорт КАК АвтомобильныйТранспорт,
+	ДокументСНТ.АдресПолучателяПоЛицензии КАК АдресПолучателяПоЛицензии,
+	ДокументСНТ.АдресПоставщикаПоЛицензии КАК АдресПоставщикаПоЛицензии,
+	ДокументСНТ.ВоздушныйТранспорт КАК ВоздушныйТранспорт,
+	ДокументСНТ.ГосНомерАТСФакт КАК ГосНомерАТСФакт,
+	ДокументСНТ.ГосномерПрицепа КАК ГосномерПрицепа,
+	ДокументСНТ.УдалитьДатаВвозаВывоза КАК УдалитьДатаВвозаВывоза,
+	ДокументСНТ.ДатаВремяПересеченияГосударственнойГраницы КАК ДатаВремяПересеченияГосударственнойГраницы,
+	ДокументСНТ.ДатаВыпискиНаБумажномНосителе КАК ДатаВыпискиНаБумажномНосителе,
+	ДокументСНТ.ДатаДоверенностиОтпуск КАК ДатаДоверенностиОтпуск,
+	ДокументСНТ.ДатаДоверенностиПриемка КАК ДатаДоверенностиПриемка,
+	ДокументСНТ.ДатаОтзыва КАК ДатаОтзыва,
+	ДокументСНТ.ДатаПриема КАК ДатаПриема,
+	ДокументСНТ.УдалитьДатаТТН КАК УдалитьДатаТТН,
+	ДокументСНТ.ДоговорВРамкахУСДПолучательДата КАК ДоговорВРамкахУСДПолучательДата,
+	ДокументСНТ.ДоговорВРамкахУСДПолучательНомер КАК ДоговорВРамкахУСДПолучательНомер,
+	ДокументСНТ.ДоговорВРамкахУСДПоставщикДата КАК ДоговорВРамкахУСДПоставщикДата,
+	ДокументСНТ.ДоговорВРамкахУСДПоставщикНомер КАК ДоговорВРамкахУСДПоставщикНомер,
+	ДокументСНТ.ДоговорПоставки КАК ДоговорПоставки,
+	ДокументСНТ.БезДоговора КАК БезДоговора,
+	ДокументСНТ.ДоговорПоставкиДата КАК ДоговорПоставкиДата,
+	ДокументСНТ.ДоговорПоставкиНомер КАК ДоговорПоставкиНомер,
+	ДокументСНТ.ДоговорПоставкиУсловияОплаты КАК ДоговорПоставкиУсловияОплаты,
+	ДокументСНТ.ДоговорПоставкиУсловияПоставки КАК ДоговорПоставкиУсловияПоставки,
+	ДокументСНТ.ДокументОснование КАК ДокументОснование,
+	ДокументСНТ.УдалитьЕстьТабачныеИзделияЦифроваяМаркировка КАК УдалитьЕстьТабачныеИзделияЦифроваяМаркировка,
+	ДокументСНТ.ЖелезнодорожныйТранспорт КАК ЖелезнодорожныйТранспорт,
+	ДокументСНТ.ЗВСНомерРасходногоОрдераТребованиеЗаправки КАК ЗВСНомерРасходногоОрдераТребованиеЗаправки,
+	ДокументСНТ.ЗВСНомерРейса КАК ЗВСНомерРейса,
+	ДокументСНТ.ЗВСРегистрационныйНомерБорта КАК ЗВСРегистрационныйНомерБорта,
+	ДокументСНТ.ЗВСТипВоздушногоСудна КАК ЗВСТипВоздушногоСудна,
+	ДокументСНТ.Идентификатор КАК Идентификатор,
+	ДокументСНТ.ИдентификаторТерриторииСЭЗ КАК ИдентификаторТерриторииСЭЗ,
+	ДокументСНТ.ИИНВодителя КАК ИИНВодителя,
+	ДокументСНТ.ИИНВодителяФакт КАК ИИНВодителяФакт,
+	ДокументСНТ.КодОГДДоставкиG6 КАК КодОГДДоставкиG6,
+	ДокументСНТ.КодОГДДоставкиG7 КАК КодОГДДоставкиG7,
+	ДокументСНТ.КодОГДДоставкиG8 КАК КодОГДДоставкиG8,
+	ДокументСНТ.КодОГДОтправкиG6 КАК КодОГДОтправкиG6,
+	ДокументСНТ.КодОГДОтправкиG7 КАК КодОГДОтправкиG7,
+	ДокументСНТ.КодОГДОтправкиG8 КАК КодОГДОтправкиG8,
+	ДокументСНТ.КодОГДПолучателя КАК КодОГДПолучателя,
+	ДокументСНТ.КодОГДПоставщика КАК КодОГДПоставщика,
+	ДокументСНТ.КодОперацииG2 КАК КодОперацииG2,
+	ДокументСНТ.КодОперацииG4 КАК КодОперацииG4,
+	ДокументСНТ.КодОперацииG5 КАК КодОперацииG5,
+	ДокументСНТ.КодОперацииG6 КАК КодОперацииG6,
+	ДокументСНТ.КодОперацииG7 КАК КодОперацииG7,
+	ДокументСНТ.КодОперацииG8 КАК КодОперацииG8,
+	ДокументСНТ.Контрагент КАК Контрагент,
+	ДокументСНТ.УдалитьМаркаАТС КАК УдалитьМаркаАТС,
+	ДокументСНТ.МаркаАТСФакт КАК МаркаАТСФакт,
+	ДокументСНТ.УдалитьМаркаПрицепа КАК УдалитьМаркаПрицепа,
+	ДокументСНТ.МестоРеализацииНеРК КАК МестоРеализацииНеРК,
+	ДокументСНТ.МорскойТранспорт КАК МорскойТранспорт,
+	ДокументСНТ.Мультимодальный КАК Мультимодальный,
+	ДокументСНТ.НомерБорта КАК НомерБорта,
+	ДокументСНТ.НомерВагона КАК НомерВагона,
+	ДокументСНТ.НомерДоверенностиОтпуск КАК НомерДоверенностиОтпуск,
+	ДокументСНТ.НомерДоверенностиПриемка КАК НомерДоверенностиПриемка,
+	ДокументСНТ.НомерЛицензииПолучателя КАК НомерЛицензииПолучателя,
+	ДокументСНТ.НомерЛицензииПоставщика КАК НомерЛицензииПоставщика,
+	ДокументСНТ.НомерОттискаПломбы КАК НомерОттискаПломбы,
+	ДокументСНТ.НомерСудна КАК НомерСудна,
+	ДокументСНТ.НомерТС КАК НомерТС,
+	ДокументСНТ.УдалитьНомерТТН КАК УдалитьНомерТТН,
+	ДокументСНТ.Организация КАК Организация,
+	ДокументСНТ.ОтпускПроизвел КАК ОтпускПроизвел,
+	ДокументСНТ.Перевозчик КАК Перевозчик,
+	ДокументСНТ.ПеревозчикИдентификатор КАК ПеревозчикИдентификатор,
+	ДокументСНТ.ПеревозчикНаименование КАК ПеревозчикНаименование,
+	ДокументСНТ.ПеревозчикНерезидент КАК ПеревозчикНерезидент,
+	ДокументСНТ.ПриемПроизвел КАК ПриемПроизвел,
+	ДокументСНТ.Причина КАК Причина,
+	ДокументСНТ.ПричинаВыпискиНаБумажномНосителе КАК ПричинаВыпискиНаБумажномНосителе,
+	ДокументСНТ.ПунктАвтомобильногоПропуска КАК ПунктАвтомобильногоПропуска,
+	ДокументСНТ.УдалитьПунктВвозаВывоза КАК УдалитьПунктВвозаВывоза,
+	ДокументСНТ.Состояние КАК Состояние,
+	ДокументСНТ.СПересечениемГраницы КАК СПересечениемГраницы,
+	ДокументСНТ.Статус КАК Статус,
+	ДокументСНТ.СуммаДокумента КАК СуммаДокумента,
+	ДокументСНТ.ТипПодписи КАК ТипПодписи,
+	ДокументСНТ.ТипПоставщикаG6 КАК ТипПоставщикаG6,
+	ДокументСНТ.ТипПоставщикаG7 КАК ТипПоставщикаG7,
+	ДокументСНТ.УдалитьТипСредстваИдентификации КАК УдалитьТипСредстваИдентификации,
+	ДокументСНТ.Трубопровод КАК Трубопровод,
+	ДокументСНТ.ФИОВодителя КАК ФИОВодителя,
+	ДокументСНТ.ФИОВодителяФакт КАК ФИОВодителяФакт,
+	ДокументСНТ.ФИОВыписывающегоСНТ КАК ФИОВыписывающегоСНТ,
+	ДокументСНТ.ФИОПодтвердившегоСНТ КАК ФИОПодтвердившегоСНТ,
+	ДокументСНТ.ФИОСотрудникаОГД КАК ФИОСотрудникаОГД,
+	ДокументСНТ.ЭЦП КАК ЭЦП,
+	ДокументСНТ.ЭЦПУполномоченногоПодписыватьСНТ КАК ЭЦПУполномоченногоПодписыватьСНТ,
+	ДокументСНТ.ЭЦПУполномоченногоПодтверждатьСНТ КАК ЭЦПУполномоченногоПодтверждатьСНТ,
+	ДокументСНТ.ЭЦПЮрЛицаОтпуск КАК ЭЦПЮрЛицаОтпуск,
+	ДокументСНТ.ЭЦПЮрЛицаПрием КАК ЭЦПЮрЛицаПрием,
+	ДокументСНТ.Автор КАК Автор,
+	ДокументСНТ.Комментарий КАК Комментарий,
+	ДокументСНТ.ПредоставленВБумажномВиде КАК ПредоставленВБумажномВиде,
+	ДокументСНТ.СтруктурноеПодразделение КАК СтруктурноеПодразделение,
+	ДокументСНТ.СтруктурноеПодразделениеПолучатель КАК СтруктурноеПодразделениеПолучатель,
+	ДокументСНТ.СтатусСопоставленияДляСНТ КАК СтатусСопоставленияДляСНТ,
+	ДокументСНТ.МоментВремени КАК МоментВремени,
+	Первичный.Ссылка КАК ЭСФ
+ИЗ
+	Документ.СНТ КАК ДокументСНТ
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭСФ КАК Первичный
+		ПО ДокументСНТ.Ссылка = Первичный.СНТ</QueryText>
+				<MainTable>Document.СНТ</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Направление</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.НаправленияСНТ.Исходящий</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭСФ.Состояние</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭСФ.Аннулирован</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ОрганизацияЭСФ</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.КонтрагентЭСФ</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Состояние" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияСНТ</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокСостояние</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ОтклоненСервером</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.Аннулирован</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ОтклоненПолучателем</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.Отозван</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ОтклоненОГД</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:FireBrick</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокСостояние</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ПринятСервером</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ПринятОтПоставщика</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ДоставленПолучателю</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ПодтвержденПолучателем</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ПодтвержденОГД</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:DarkGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокСостояние</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.Сформирован</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ОжидаетИдентификацииТоваровНаВС</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.Состояние</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСНТ.ОбрабатываетсяСервером</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumBlue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Document.СНТ.Command.Подтвердить</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.СоздатьПервичныйДокумент</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Отклонить</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Отозвать</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Отправить</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Проверить</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Выгрузить</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Document.СНТ.Command.Обновить</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

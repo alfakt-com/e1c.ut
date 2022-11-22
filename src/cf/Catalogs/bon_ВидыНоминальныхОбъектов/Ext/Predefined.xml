@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.9">
+	<Item id="0398d05b-b0a9-4663-aeaf-4d255d1ba14c">
+		<Name>АкционныеСертификаты</Name>
+		<Code>58</Code>
+		<Description>Акционные Сертификаты</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6ce8d32d-3a8c-41c9-a7ff-7f256dbacdb9">
+		<Name>БонусныеСчета</Name>
+		<Code>01</Code>
+		<Description>Бонусные счета</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

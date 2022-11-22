@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Width>88</Width>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1710">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="1733"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="1569">
+					<Width>78</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка параметров обмена электронными счетами-фактурами.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="1570"/>
+					<ExtendedTooltip name="ОписаниеРазделаExtendedTooltip" id="1734"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЗаголовка" id="1711">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияЗаголовкаКонтекстноеМеню" id="1712"/>
+					<ExtendedTooltip name="ДекорацияЗаголовкаExtendedTooltip" id="1735"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1713">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="1736"/>
+					<ChildItems>
+						<Button name="Справка" id="1714">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="1737"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеОбменомЭСФ" id="1790">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные счета-фактуры</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление обменом ЭСФ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУправлениеОбменомЭСФРасширеннаяПодсказка" id="1791"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьПрямойОбмен" id="1792">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронные счета фактуры (левая колонка)</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьПрямойОбменРасширеннаяПодсказка" id="1793"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьОбменЭСФЧерезAPI" id="1794">
+							<DataPath>НаборКонстант.ИспользоватьОбменЭСФЧерезAPI</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прямой обмен с ИС ЭСФ</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьОбменЭСФЧерезAPIКонтекстноеМеню" id="1795"/>
+							<ExtendedTooltip name="ИспользоватьОбменЭСФЧерезAPIРасширеннаяПодсказка" id="1796"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьОбменЭСФЧерезAPIПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="НадписьОписаниеОбменаЧерезAPI" id="1797">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправка и получение электронных счетов-фактур происходит непосредственно из информационной базы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОписаниеОбменаЧерезAPIКонтекстноеМеню" id="1798"/>
+							<ExtendedTooltip name="НадписьОписаниеОбменаЧерезAPIРасширеннаяПодсказка" id="1799"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИспользоватьОбменЧерезФайлы" id="1807">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронные счета фактуры (правая колонка)</v8:content>
+						</v8:item>
+					</Title>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьОбменЧерезФайлыРасширеннаяПодсказка" id="1808"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьОбменЭСФЧерезXML" id="1809">
+							<DataPath>НаборКонстант.ИспользоватьОбменЭСФЧерезXML</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обмен с ИС ЭСФ через выгрузку/загрузку XML файлов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьОбменЭСФЧерезXMLКонтекстноеМеню" id="1810"/>
+							<ExtendedTooltip name="ИспользоватьОбменЭСФЧерезXMLРасширеннаяПодсказка" id="1811"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьОбменЭСФЧерезXMLПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="НадписьОтправкаXML" id="1812">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выданные электронные счет-фактуры подготавливаются в информационной базе, затем выгружаются в XML файлы, которые импортируются в ИС ЭСФ.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОтправкаXMLКонтекстноеМеню" id="1813"/>
+							<ExtendedTooltip name="НадписьОтправкаXMLРасширеннаяПодсказка" id="1814"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьПолучениеXML" id="1815">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полученные электронные счета-фактуры экспортируются из ИС ЭСФ в XML файлы, которые загружаются в информационную базу.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПолучениеXMLКонтекстноеМеню" id="1816"/>
+							<ExtendedTooltip name="НадписьПолучениеXMLРасширеннаяПодсказка" id="1817"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиЭД" id="1254">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные счета-фактуры</v8:content>
+				</v8:item>
+			</Title>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаНастройкиЭДExtendedTooltip" id="1753"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиЭД1" id="1255">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки э д1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки э д1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>43</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиЭД1ExtendedTooltip" id="1754"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОткрытьПомощникПодключенияКПрямомуОбмену" id="1725">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОткрытьПомощникПодключенияКПрямомуОбменуExtendedTooltip" id="1758"/>
+							<ChildItems>
+								<Button name="ОткрытьПомощникПодключенияКПрямомуОбмену" id="1726">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПомощникПодключенияКПрямомуОбмену</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПомощникПодключенияКПрямомуОбменуРасширеннаяПодсказка" id="1759">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров обмена электронными счетами-фактурами с контрагентами.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПомощниковПодключения" id="1720">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощников подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощников подключения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПомощниковПодключенияExtendedTooltip" id="1761"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОткрытьПрофилиИСЭСФ" id="1260">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть профили ИСЭСФ</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть профили ИСЭСФ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОткрытьПрофилиИСЭСФРасширеннаяПодсказка" id="1762"/>
+							<ChildItems>
+								<Button name="ОткрытьНастройкиПрофилейИСЭСФ" id="1267">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНастройкиПрофилейЭСФ</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьНастройкиПрофилейИСЭСФРасширеннаяПодсказка" id="1763">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка профилей организации для обмена электронными документами.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОткрытьСоглашенияОбИспользованииЭД" id="1264">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа открыть соглашения об использовании ЭД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОткрытьСоглашенияОбИспользованииЭДExtendedTooltip" id="1765"/>
+							<ChildItems>
+								<Button name="ОткрытьПользователейИСЭСФ" id="1268">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПользователейИСЭСФ</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПользователейИСЭСФРасширеннаяПодсказка" id="1766">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка параметров обмена электронными документами с контрагентами, банками и между организациями.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиВС" id="1818">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виртуальный склад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки ВС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастройкиВСРасширеннаяПодсказка" id="1819"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПомощник" id="1820">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помощник</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПомощникРасширеннаяПодсказка" id="1821"/>
+					<ChildItems>
+						<Button name="ПомощникПереходаНаУчетТоваровВС" id="1822">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьПомощникПереходаНаУчетТоваровВС</CommandName>
+							<ExtendedTooltip name="ПомощникПереходаНаУчетТоваровВСРасширеннаяПодсказка" id="1823"/>
+						</Button>
+						<LabelDecoration name="ПояснениеПомощникВС" id="1824">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пошаговая настройка параметров подключения к модулю "Виртуальный склад", начальное заполнене данных для учета товаров виртуального склада.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеПомощникВСКонтекстноеМеню" id="1825"/>
+							<ExtendedTooltip name="ПояснениеПомощникВСРасширеннаяПодсказка" id="1826"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАВР" id="1827">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные акты выполненных работ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа АВР</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаАВРРасширеннаяПодсказка" id="1828"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьЭлектронныеАВР" id="1829">
+					<DataPath>НаборКонстант.ИспользоватьЭлектронныеАВР</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьЭлектронныеАВРКонтекстноеМеню" id="1830"/>
+					<ExtendedTooltip name="ИспользоватьЭлектронныеАВРРасширеннаяПодсказка" id="1831"/>
+					<Events>
+						<Event name="OnChange">Подключаемый_ПриИзмененииРеквизита</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="ПояснениеИспользованиеАВР" id="1832">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование электронных актов выполненных работ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеИспользованиеАВРКонтекстноеМеню" id="1833"/>
+					<ExtendedTooltip name="ПояснениеИспользованиеАВРРасширеннаяПодсказка" id="1834"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСНТ" id="1835">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные сопроводительные накладные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа СНТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаСНТРасширеннаяПодсказка" id="1836"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкаСНТ" id="1837">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка СНТ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка СНТ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкаСНТРасширеннаяПодсказка" id="1838"/>
+					<ChildItems>
+						<Button name="НастройкаСНТ" id="1839">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьНастройкиСНТ</CommandName>
+							<ExtendedTooltip name="НастройкаСНТРасширеннаяПодсказка" id="1840"/>
+						</Button>
+						<LabelDecoration name="ПояснениеНастройкиСНТ" id="1841">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка параметров обмена СНТ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеНастройкиСНТКонтекстноеМеню" id="1842"/>
+							<ExtendedTooltip name="ПояснениеНастройкиСНТРасширеннаяПодсказка" id="1843"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ИспользоватьОбменЭСФЧерезAPI</Field>
+				<Field>НаборКонстант.ИспользоватьОбменЭСФЧерезXML</Field>
+				<Field>НаборКонстант.ИспользоватьПолнотекстовыйПоискПриПодбореТоваров</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьНастройкиПрофилейЭСФ" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профили ИС ЭСФ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть профили настроек ЭДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиПрофилейИСЭСФ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПользователейИСЭСФ" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи ИС ЭСФ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПользователейИСЭСФ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПомощникПодключенияКПрямомуОбмену" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить обмен с ИС ЭСФ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПомощникПодключенияКПрямомуОбмену</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПомощникПереходаНаУчетТоваровВС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник перехода на учет товаров ВС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть помощник перехода на учет товаров ВС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПомощникПереходаНаУчетТоваровВС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНастройкиСНТ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка СНТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки СНТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиСНТ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

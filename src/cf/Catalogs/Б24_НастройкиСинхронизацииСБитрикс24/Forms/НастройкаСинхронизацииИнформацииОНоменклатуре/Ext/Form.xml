@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Синхронизация информации о товарах</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтавкиНДС" id="320">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставление ставок НДС 1С и Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ставки НДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>60</Width>
+			<Height>15</Height>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСтавкиНДСРасширеннаяПодсказка" id="321"/>
+			<ChildItems>
+				<Table name="СтавкиНДС" id="322">
+					<Representation>List</Representation>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СтавкиНДС</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СтавкиНДСКонтекстноеМеню" id="323"/>
+					<AutoCommandBar name="СтавкиНДСКоманднаяПанель" id="324">
+						<ChildItems>
+							<Button name="ЗагрузитьНДССПортала" id="344">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьНДССПортала</CommandName>
+								<ExtendedTooltip name="ЗагрузитьНДССПорталаРасширеннаяПодсказка" id="345"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СтавкиНДСРасширеннаяПодсказка" id="325"/>
+					<SearchStringAddition name="СтавкиНДССтрокаПоиска" id="326">
+						<AdditionSource>
+							<Item>СтавкиНДС</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНДССтрокаПоискаКонтекстноеМеню" id="327"/>
+						<ExtendedTooltip name="СтавкиНДССтрокаПоискаРасширеннаяПодсказка" id="328"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СтавкиНДССостояниеПросмотра" id="329">
+						<AdditionSource>
+							<Item>СтавкиНДС</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНДССостояниеПросмотраКонтекстноеМеню" id="330"/>
+						<ExtendedTooltip name="СтавкиНДССостояниеПросмотраРасширеннаяПодсказка" id="331"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СтавкиНДСУправлениеПоиском" id="332">
+						<AdditionSource>
+							<Item>СтавкиНДС</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНДСУправлениеПоискомКонтекстноеМеню" id="333"/>
+						<ExtendedTooltip name="СтавкиНДСУправлениеПоискомРасширеннаяПодсказка" id="334"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СтавкиНДСНаименованиеСтавкиНДС" id="349">
+							<DataPath>СтавкиНДС.НаименованиеСтавкиНДС</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ставка НДС на портале</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНДСНаименованиеСтавкиНДСКонтекстноеМеню" id="350"/>
+							<ExtendedTooltip name="СтавкиНДСНаименованиеСтавкиНДСРасширеннаяПодсказка" id="351"/>
+						</InputField>
+						<InputField name="СтавкиНДСИдСтавки" id="352">
+							<DataPath>СтавкиНДС.ИдСтавки</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНДСИдСтавкиКонтекстноеМеню" id="353"/>
+							<ExtendedTooltip name="СтавкиНДСИдСтавкиРасширеннаяПодсказка" id="354"/>
+						</InputField>
+						<InputField name="СтавкиНДССтавкаНДС" id="355">
+							<DataPath>СтавкиНДС.СтавкаНДС</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ставка НДС в 1С</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНДССтавкаНДСКонтекстноеМеню" id="356"/>
+							<ExtendedTooltip name="СтавкиНДССтавкаНДСРасширеннаяПодсказка" id="357"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<LabelDecoration name="ИнформацияОНастройкеШаблоновРеквизитов1" id="346">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По связке определяется, какая ставка НДС устанавливается в 1С	и на портале</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнформацияОНастройкеШаблоновРеквизитов1КонтекстноеМеню" id="347"/>
+					<ExtendedTooltip name="ИнформацияОНастройкеШаблоновРеквизитов1РасширеннаяПодсказка" id="348"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ВыгружатьТовары" id="59">
+			<DataPath>ВыгружатьТовары</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать информацию о товарах</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыгружатьТоварыКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ВыгружатьТоварыРасширеннаяПодсказка" id="61"/>
+			<Events>
+				<Event name="OnChange">ВыгружатьОбъектПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="НастройкиВыгрузкиИнформацииОТоварах" id="288">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки выгрузки информации о товарах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки выгрузки информации о товарах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Behavior>Collapsible</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="НастройкиВыгрузкиИнформацииОТоварахРасширеннаяПодсказка" id="289"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельВыгрузки" id="265">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель выгрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КоманднаяПанельВыгрузкиРасширеннаяПодсказка" id="266"/>
+					<ChildItems>
+						<Button name="ФормаНастроитьДеревоГрупп" id="46">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.НастроитьДеревоГрупп</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ФормаНастроитьДеревоГруппРасширеннаяПодсказка" id="47"/>
+						</Button>
+						<Button name="ТаблицаКаталоговНастроитьОтбор" id="229">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.НастроитьОтбор</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.CustomizeList</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ТаблицаКаталоговНастроитьОтборРасширеннаяПодсказка" id="230"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<UsualGroup name="ГруппаТовары" id="263">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа товары</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="264"/>
+					<ChildItems>
+						<InputField name="ДеревоГрупп" id="317">
+							<DataPath>ДеревоГрупп</DataPath>
+							<ContextMenu name="ДеревоГруппКонтекстноеМеню" id="318"/>
+							<ExtendedTooltip name="ДеревоГруппРасширеннаяПодсказка" id="319"/>
+						</InputField>
+						<CheckBoxField name="ВыгружатьШтрихкоды" id="157">
+							<DataPath>ВыгружатьШтрихкоды</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгружать штрих-коды</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгружатьШтрихкодыКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="ВыгружатьШтрихкодыРасширеннаяПодсказка" id="159"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВыгружатьПланируемуюДатуПоступления" id="257">
+							<DataPath>ВыгружатьПланируемуюДатуПоступления</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгружать планируемую дату поступления</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгружатьПланируемуюДатуПоступленияКонтекстноеМеню" id="258"/>
+							<ExtendedTooltip name="ВыгружатьПланируемуюДатуПоступленияРасширеннаяПодсказка" id="259"/>
+						</CheckBoxField>
+						<InputField name="ТипЦены" id="274">
+							<DataPath>Прайс</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прайс-лист</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ТипЦеныКонтекстноеМеню" id="275"/>
+							<ExtendedTooltip name="ТипЦеныРасширеннаяПодсказка" id="276"/>
+						</InputField>
+						<InputField name="Склад" id="277">
+							<DataPath>Склад</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипСтруктурнойЕдиницы">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">7f735eb1-d1d4-4509-bd07-207e538eaf7e.86426cf8-824c-479b-96ad-7dc1a16c73ba</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="СкладКонтекстноеМеню" id="278"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="279"/>
+						</InputField>
+						<CheckBoxField name="ВыгружатьКартинкиИФайлы" id="74">
+							<DataPath>ВыгружатьКартинкиИФайлы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгружатьКартинкиИФайлыКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ВыгружатьКартинкиИФайлыРасширеннаяПодсказка" id="76"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ЗагружатьТовары" id="290">
+			<DataPath>ЗагружатьТовары</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать информацию о товарах</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗагружатьТоварыКонтекстноеМеню" id="291"/>
+			<ExtendedTooltip name="ЗагружатьТоварыРасширеннаяПодсказка" id="292"/>
+			<Events>
+				<Event name="OnChange">ВыгружатьОбъектПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="НастройкиЗагрузкиИнформацииОТоварах" id="286">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки загрузки информации о товарах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки загрузки информации о товарах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>50</Width>
+			<Group>Vertical</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="НастройкиЗагрузкиИнформацииОТоварахРасширеннаяПодсказка" id="287"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВидыНоменклатуры" id="304">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды номенклатуры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВидыНоменклатурыРасширеннаяПодсказка" id="305"/>
+					<ChildItems>
+						<CheckBoxField name="ОбновлятьТовары" id="306">
+							<DataPath>ОбновлятьТовары</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбновлятьТоварыКонтекстноеМеню" id="307"/>
+							<ExtendedTooltip name="ОбновлятьТоварыРасширеннаяПодсказка" id="308"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ЗагружатьКартинкиИФайлы" id="309">
+					<DataPath>ЗагружатьКартинкиИФайлы</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьКартинкиИФайлыКонтекстноеМеню" id="310"/>
+					<ExtendedTooltip name="ЗагружатьКартинкиИФайлыРасширеннаяПодсказка" id="311"/>
+				</CheckBoxField>
+				<Button name="ВыгрузитьВидыНоменклатурыВБитрикс24" id="312">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыгрузитьВидыНоменклатуры</CommandName>
+					<ExtendedTooltip name="ВыгрузитьВидыНоменклатурыВБитрикс24РасширеннаяПодсказка" id="313"/>
+				</Button>
+				<LabelDecoration name="ДекорацияОВидеНоменклатуры" id="314">
+					<Visible>false</Visible>
+					<Width>60</Width>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;i&gt;Из Битрикс24 выгружается только тот товар, у которого      установлено свойство "Категория номенклатуры". Чтобы      выгрузить это свойство из 1С - нужно нажать на кнопку&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОВидеНоменклатурыКонтекстноеМеню" id="315"/>
+					<ExtendedTooltip name="ДекорацияОВидеНоменклатурыРасширеннаяПодсказка" id="316"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанельПодвал" id="233">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КоманднаяПанельПодвалРасширеннаяПодсказка" id="234"/>
+			<ChildItems>
+				<Button name="ФормаПрименить" id="225">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Применить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Применить и закрыть</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаПрименитьРасширеннаяПодсказка" id="226"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВыгружатьТовары" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать товары</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВыгружатьКартинкиИФайлы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать картинки и файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВыгружатьПланируемуюДатуПоступления" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать планируемую дату поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВыгружатьШтрихкоды" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать штрихкоды</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Склад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Прайс" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прайс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НужноЗакрытьОкно" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нужно закрыть окно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиКомпоновкиДанныхТоваров" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки компоновки данных товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗагружатьТовары" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать товары</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбновлятьТовары" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновлять информацию о товарах в 1С по данным Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗагружатьКартинкиИФайлы" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать картинки и файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗагружатьТоварыЭталон" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать товары</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НастройкаСинхронизации" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Б24_НастройкиСинхронизацииСБитрикс24</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоГрупп" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево групп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Б24_ПользовательскиеГруппыТоваров</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторКаталога" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор каталога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтавкиНДС" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставки НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="НаименованиеСтавкиНДС" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование ставки НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдСтавки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид ставки НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтавкаНДС" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьДеревоГрупп" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить дерево групп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить дерево групп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeHierarchicalList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастроитьДеревоГрупп</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Применить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Применить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастроитьОтбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьОтбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьВидыНоменклатуры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить виды номенклатуры в Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить виды номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВидыНоменклатуры</Action>
+		</Command>
+		<Command name="ЗагрузитьНДССПортала" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить ставки НДС с Битрикс24</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить НДССПортала</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНДССПортала</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

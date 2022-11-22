@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОсновнойНаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДанных</dataPath>
+			<field>ТипДанных</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НастройкаСинхронизации</dataPath>
+			<field>НастройкаСинхронизации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка синхронизации</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Б24_ТаблицаИзменений.Объект КАК Объект
+ПОМЕСТИТЬ ВремИзмененныеОтгрузки
+ИЗ
+	РегистрСведений.Б24_ТаблицаИзменений КАК Б24_ТаблицаИзменений
+ГДЕ
+	Б24_ТаблицаИзменений.ТипДанных = &amp;ТипДанных
+	И Б24_ТаблицаИзменений.НастройкаСинхронизации = &amp;НастройкаСинхронизации
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Б24_ПакетыВыгрузки.Объект
+ИЗ
+	РегистрСведений.Б24_ПакетыВыгрузки КАК Б24_ПакетыВыгрузки
+ГДЕ
+	Б24_ПакетыВыгрузки.ТипДанных = &amp;ТипДанных
+	И Б24_ПакетыВыгрузки.НастройкаСинхронизации = &amp;НастройкаСинхронизации
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РеализацияТоваровУслуг.ЗаказКлиента КАК Заказ,
+	ВремИзмененныеОтгрузки.Объект КАК Отгрузка
+ПОМЕСТИТЬ ВремЗаказыИзмененныхОтгрузок
+ИЗ
+	ВремИзмененныеОтгрузки КАК ВремИзмененныеОтгрузки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+		ПО ВремИзмененныеОтгрузки.Объект = РеализацияТоваровУслуг.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВремИзмененныеОтгрузки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Б24_ИдентификаторыОбъектов.Объект КАК Заказ,
+	ЗаказКлиента.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВремВсеЗаказы
+ИЗ
+	РегистрСведений.Б24_ИдентификаторыОбъектов КАК Б24_ИдентификаторыОбъектов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказКлиента
+		ПО Б24_ИдентификаторыОбъектов.Объект = ЗаказКлиента.Ссылка
+ГДЕ
+	Б24_ИдентификаторыОбъектов.ТипДанных = ЗНАЧЕНИЕ(Перечисление.Б24_ТипыДанныхДляОбменаСПорталом.Заказ)
+	И Б24_ИдентификаторыОбъектов.Портал = &amp;Портал
+
+ИНДЕКСИРОВАТЬ ПО
+	Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВремВсеЗаказы.Заказ КАК Заказ
+ПОМЕСТИТЬ ВремЗаказы
+ИЗ
+	ВремВсеЗаказы КАК ВремВсеЗаказы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказКлиента
+		ПО ВремВсеЗаказы.Заказ = ЗаказКлиента.Ссылка
+ГДЕ
+	&amp;ПолнаяВыгрузка = ИСТИНА
+	И ЗаказКлиента.Дата &gt;= &amp;ДатаНачалаВыгрузкиЗаказов
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВремЗаказыИзмененныхОтгрузок.Заказ
+ИЗ
+	ВремЗаказыИзмененныхОтгрузок КАК ВремЗаказыИзмененныхОтгрузок
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказКлиента
+		ПО ВремЗаказыИзмененныхОтгрузок.Заказ = ЗаказКлиента.Ссылка
+ГДЕ
+	&amp;ПолнаяВыгрузка = ЛОЖЬ
+	И ЗаказКлиента.Дата &gt;= &amp;ДатаНачалаВыгрузкиЗаказов
+
+ИНДЕКСИРОВАТЬ ПО
+	Заказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВремЗаказыИзмененныхОтгрузок
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВремВсеЗаказы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РеализацияТоваровУслуг.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВремОтгрузки
+ИЗ
+	ВремЗаказы КАК ВремЗаказы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+		ПО ВремЗаказы.Заказ = РеализацияТоваровУслуг.ЗаказКлиента
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказПокупателя
+		ПО ВремЗаказы.Заказ = ЗаказПокупателя.Ссылка
+ГДЕ
+	ЗаказПокупателя.Дата &gt;= &amp;ДатаНачалаВыгрузкиЗаказов
+	И РеализацияТоваровУслуг.ПометкаУдаления = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВремЗаказы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВремОтгрузки.Ссылка КАК Объект,
+	&amp;ТипДанных КАК ТипДанных,
+	&amp;НастройкаСинхронизации КАК НастройкаСинхронизации
+ИЗ
+	ВремОтгрузки КАК ВремОтгрузки</query>
+	</dataSet>
+	<parameter>
+		<name>ПолнаяВыгрузка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Полная выгрузка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТипДанных</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип данных</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НастройкаСинхронизации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройка синхронизации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Б24_НастройкиСинхронизацииСБитрикс24</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Портал</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Портал</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаНачалаВыгрузкиЗаказов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала выгрузки заказов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НастройкаСинхронизации</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>090adec4-1ca9-42ec-8a56-ed25b09332ea</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отбор</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

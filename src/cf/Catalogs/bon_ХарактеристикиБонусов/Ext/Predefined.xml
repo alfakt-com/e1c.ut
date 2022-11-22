@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.9">
+	<Item id="6b229dce-0df5-41d8-ae21-4748fa06b6d4">
+		<Name>Предопределенные</Name>
+		<Code>000000005</Code>
+		<Description>Предопределенные</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="160e48a4-8f7f-4b84-8b4f-5a59ddce2f4a">
+				<Name>АкционныеБонусы</Name>
+				<Code>000000004</Code>
+				<Description>Акционные Бонусы</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2f45f8a4-3f31-45e5-b584-6e56590274ad">
+				<Name>АкционныеСертификаты</Name>
+				<Code>000000002</Code>
+				<Description>Акционные Сертификаты</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ca4a0135-fdc8-4214-a719-4eec48c2e940">
+				<Name>ПодарочныйСертификатСтандарт</Name>
+				<Code>000000003</Code>
+				<Description>Подарочный сертификат "Стандарт"</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c9029683-0a63-4aec-9f23-3f5351d22a31">
+				<Name>Стандартные</Name>
+				<Code>000000001</Code>
+				<Description>Стандартные</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

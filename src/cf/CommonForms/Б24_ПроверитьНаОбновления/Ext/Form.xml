@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОбщаяГруппаВерсий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа версий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа версий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбщаяГруппаВерсийРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнфоВерсий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо версий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа инфо версий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаИнфоВерсийРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<LabelDecoration name="ТекущаяВерсияИнфо" id="5">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текущая версия модуля:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущаяВерсияИнфоКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ТекущаяВерсияИнфоРасширеннаяПодсказка" id="7"/>
+						</LabelDecoration>
+						<LabelDecoration name="НоваяВерсияИнфо" id="8">
+							<Visible>false</Visible>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новая версия модуля:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НоваяВерсияИнфоКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="НоваяВерсияИнфоРасширеннаяПодсказка" id="10"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВерсий" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаВерсийРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<LabelDecoration name="ТекущаяВерсия" id="13">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0.0.0.0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекущаяВерсияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ТекущаяВерсияРасширеннаяПодсказка" id="15"/>
+						</LabelDecoration>
+						<LabelDecoration name="НоваяВерсия" id="16">
+							<Visible>false</Visible>
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Font ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0.0.0.0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НоваяВерсияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="НоваяВерсияРасширеннаяПодсказка" id="18"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУстановка" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа установка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа установка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУстановкаРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Button name="УстановитьМодуль" id="21">
+					<Type>UsualButton</Type>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.УстановитьМодуль</CommandName>
+					<ExtendedTooltip name="УстановитьМодульРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<LabelDecoration name="Декорация2" id="23">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должен быть запущент только один сеанс к базе 1С (монопольный запуск)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="25"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ИнфоОЗапретеУстановки" id="30">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инфо о запрете установки</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнфоОЗапретеУстановкиКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ИнфоОЗапретеУстановкиРасширеннаяПодсказка" id="32"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаНовыеВерсии" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущенные версии модулей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа новые версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНовыеВерсииРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<Table name="УставливаемыеМодули" id="38">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>УставливаемыеМодули</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УставливаемыеМодулиКонтекстноеМеню" id="39"/>
+					<AutoCommandBar name="УставливаемыеМодулиКоманднаяПанель" id="40">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УставливаемыеМодулиРасширеннаяПодсказка" id="41"/>
+					<SearchStringAddition name="УставливаемыеМодулиСтрокаПоиска" id="42">
+						<AdditionSource>
+							<Item>УставливаемыеМодули</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УставливаемыеМодулиСтрокаПоискаКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="УставливаемыеМодулиСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УставливаемыеМодулиСостояниеПросмотра" id="45">
+						<AdditionSource>
+							<Item>УставливаемыеМодули</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УставливаемыеМодулиСостояниеПросмотраКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="УставливаемыеМодулиСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УставливаемыеМодулиУправлениеПоиском" id="48">
+						<AdditionSource>
+							<Item>УставливаемыеМодули</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УставливаемыеМодулиУправлениеПоискомКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="УставливаемыеМодулиУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="УставливаемыеМодулиВерсияМодуля" id="51">
+							<DataPath>УставливаемыеМодули.ВерсияМодуля</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="УставливаемыеМодулиВерсияМодуляКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="УставливаемыеМодулиВерсияМодуляРасширеннаяПодсказка" id="53"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиСсылка" id="54">
+							<DataPath>УставливаемыеМодули.Ссылка</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УставливаемыеМодулиСсылкаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="УставливаемыеМодулиСсылкаРасширеннаяПодсказка" id="56"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиДатаВыхода" id="57">
+							<DataPath>УставливаемыеМодули.ДатаВыхода</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УставливаемыеМодулиДатаВыходаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="УставливаемыеМодулиДатаВыходаРасширеннаяПодсказка" id="59"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиКритическаяИнформация" id="60">
+							<DataPath>УставливаемыеМодули.КритическаяИнформация</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УставливаемыеМодулиКритическаяИнформацияКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="УставливаемыеМодулиКритическаяИнформацияРасширеннаяПодсказка" id="62"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиИсторияИзменений" id="63">
+							<DataPath>УставливаемыеМодули.ИсторияИзменений</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Height>5</Height>
+							<VerticalStretch>true</VerticalStretch>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="УставливаемыеМодулиИсторияИзмененийКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="УставливаемыеМодулиИсторияИзмененийРасширеннаяПодсказка" id="65"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиРелизКонфигурации" id="66">
+							<DataPath>УставливаемыеМодули.РелизКонфигурации</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УставливаемыеМодулиРелизКонфигурацииКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="УставливаемыеМодулиРелизКонфигурацииРасширеннаяПодсказка" id="68"/>
+						</InputField>
+						<InputField name="УставливаемыеМодулиМинимальныйРелиз" id="69">
+							<DataPath>УставливаемыеМодули.МинимальныйРелиз</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УставливаемыеМодулиМинимальныйРелизКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="УставливаемыеМодулиМинимальныйРелизРасширеннаяПодсказка" id="71"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ИнфоВажноВерсии" id="33">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:FormTextColor</TextColor>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инфо важно версии</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнфоВажноВерсииКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ИнфоВажноВерсииРасширеннаяПодсказка" id="35"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СлужебныеДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебные данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДанныеОМодуле" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные о модуле</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РасширениеУстановлено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение установлено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УставливаемыеМодули" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уставливаемые модули</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВерсияМодуля" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия модуля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВыхода" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КритическаяИнформация" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Критическая информация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсторияИзменений" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История изменений</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РелизКонфигурации" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Релиз конфигурации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="МинимальныйРелиз" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимальный релиз</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Объект" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьМодуль" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить модуль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить модуль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьМодуль</Action>
+		</Command>
+	</Commands>
+</Form>
