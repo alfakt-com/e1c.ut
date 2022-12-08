@@ -22,6 +22,7 @@
 				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
 				<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
 				<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+				<v8:Type>cfg:DocumentRef.ПредзаказКлиента</v8:Type>
 				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектовИерархия</v8:Type>
 				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 				<v8:Type>cfg:CatalogRef.ЗначенияСвойствОбъектов</v8:Type>
